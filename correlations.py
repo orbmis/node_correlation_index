@@ -1,29 +1,40 @@
 import json
-import pandas as pd
 
 # Load the example data
 with open('collated.json', 'r') as infile:
     data = json.load(infile)
 
-# Create a DataFrame from the data
-df_list = []
+# Create a dictionary to store the result
+result_dict = {}
+
+# Iterate over each object in the top-level array
 for entity in data:
+    entity_name = entity['displayName']
+    result_dict[entity_name] = {}
+
+    # Initialize dictionary with zero values for all client names
     for pool in entity.get('pools', []):
-        df_list.append({
-            'displayName': entity['displayName'],
-            'poolName': pool['name'],
-            'validatorCount': pool['validatorCount'],
-            'networkPenetration': pool['networkPenetration']
-        })
+        for client_percentage in pool.get('clientPercentages', []):
+            client_name = client_percentage['client']
+            result_dict[entity_name][client_name] = 0
+            result_dict[entity_name]['Prysm'] = 0
+            result_dict[entity_name]['Nimbus'] = 0
+            result_dict[entity_name]['Lighthouse'] = 0
+            result_dict[entity_name]['Teku'] = 0
+            result_dict[entity_name]['Lodestar'] = 0
+            result_dict[entity_name]['Unknown'] = 0
 
-df = pd.DataFrame(df_list)
+    total_pools = 0
+    for pool in entity.get('pools', []):
+        total_pools+=1
 
-# Pivot the DataFrame to have columns for each entity and their attributes
-pivot_df = df.pivot(index='poolName', columns='displayName', values=['validatorCount', 'networkPenetration'])
+    # Iterate over each pool in the entity
+    for pool in entity.get('pools', []):
+        for client_percentage in pool.get('clientPercentages', []):
+            client_name = client_percentage['client']
 
-# Calculate correlations
-correlations = pivot_df.corr()
+            # Accumulate values for each client name
+            result_dict[entity_name][client_name] += (client_percentage['percentage'] * 100) / total_pools
 
-# Print the correlation matrix
-print("Correlation Matrix:")
-print(correlations)
+# Print the final result dictionary
+print(json.dumps(result_dict, indent=2))

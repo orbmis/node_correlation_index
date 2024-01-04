@@ -81,7 +81,7 @@ if entity A uses 13% of it's nodes running Nimbus and entity B uses 27% of it's 
 the total correlation for client software is the sum of all the above minimum similar clients (for all clients that they both share)
 
 
-
+0.42883628066172275 + 0.30233884768967484 + 0.26739874500855676 + 0.001426126640045636
 
 
 
