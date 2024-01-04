@@ -1,0 +1,84 @@
+
+Problem Statement:
+
+
+we want to measure the level of (de)centralization in the validators set through calculating the market concentration of node operators and staking pools.
+
+To do this, we use the HHI to measure market concentration based on the market share of node operators and staking pools.
+
+We adjust the market share of each node operator by applying a correlation coefficient.
+
+The correlation coefficient is calculated from the sum of correlation score of each node.
+
+Once we have the correlation coefficients for each node operator, we can derive an aggregate correlation coefficient for the staking pools they serve, which is then used to adjust the market share of each staking pool when calculating the HHI.
+
+
+
+Questions:
+
+How do we calculate the market share of node operators, i.e. how many nodes they run, or how many validators they serve?  We're assuming that we start with how many nodes they run.
+
+How do we find out which nodes belong to which node operators?
+
+How do we find out which nodes belong to which staking pools?
+
+
+Without the above information, then all we can do is measure the correlation coefficient of each node, and then calculate the HHI of each node, adjusted by correlation coefficient.  The market share of each node is simply 1, and whereas the correltation coefficient will give us an idea of how correlated that node is to other nodes, which is useful, it doesn't really tell us much more than simply observing a percentage breakdown for each attribute.   For example, we can look at the percentage brealdown for countries of operation, client, ISP, and number of subnets, which will give ud relatively the same information.
+
+Therefore:  we need a way to link nodes to node operators and validators / staking pools.
+
+
+I propose that we build our model on the old data that you have that (before the introducttion of deterministic subnets), and we conclude the paper with one or more proposals for ways to attain this information in the future, as a way to continue measuring the decentralization.  We can argue that this will be useful in order to determine the efficacy of whatever proposals are implennted (e.g. execution tickets, ePBS etc.).
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+To summarize:
+=============
+
+We need to know these questions:
+
+Does a staking pool with a double digit percentage share of the validator set maintain all it's nodes in a singel jurisdiction, or in a single data centre, or does it only maintain a single client software, or does it only rely on one or two node operators?
+
+Are the correltations between attributes, e.g.: do all node operators in a specific jurisdiction prefer a certain client, or cloud provider, or use a certain relayer, or run certain software?
+
+Do cloud instances prefer certain software compared to bare metal servers?
+
+Do certain staking pools have similar policies that their node operators follow?
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+HHI based on totalNetworkPenetration
+
+correlation coefficients based on:
+
+ - staking pools served
+ - relayerPercentages
+ - clientPercentages
+
+correlation coefficients for staking pools can be calculated as the percentage of respective staking pools in commmon
+correlation coefficients for relayerPercentages can be calculated as the percentage of respective relayerPercentages in commmon
+
+This can yield the following results:
+
+correlation between staking pools and relayers, between staking pools and client software, between client software and relayers
+
+Potentially we can add country of operation - IF we can find this data.
+
+
+
+WHICH NODE OPERATORS ARE THE MOST HIGHLY CORRELATED ACROSS EACH ATTRIBUTE?
+ehcih node operators are the omst highly correlated across all attributes?
+
+
+
+If we query via staking pool, instead of node operator, then we can yield the following results:
+
+correlation between staking pools and relayers, between staking pools and client software, between client software and relayers
+
+
+
+

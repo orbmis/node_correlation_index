@@ -1,0 +1,1886 @@
+index,country_code,client_name,isp_alias,att_subnets
+1,US,lighthouse,Amazon,64
+2,FI,teku,Hetzner Online GmbH,64
+3,JP,prysm,Amazon,64
+4,US,nimbus,AT&T,64
+5,DE,lighthouse,Hetzner Online GmbH,64
+6,JP,lighthouse,Amazon,64
+7,US,prysm,Amazon,64
+8,GB,nimbus,Hydra Communications Ltd,64
+9,GB,lighthouse,OVH SAS,64
+10,JP,lighthouse,Amazon,64
+11,DE,prysm,netcup GmbH,64
+12,DE,prysm,Google LLC,64
+13,SG,lighthouse,Amazon,64
+14,US,lighthouse,Amazon,64
+15,US,prysm,Oracle Corporation,64
+16,US,lighthouse,Amazon,64
+17,IE,prysm,Amazon,64
+18,FR,teku,Amazon,64
+19,US,lighthouse,Amazon,64
+20,LT,teku,Dedicated servers,64
+21,FR,lighthouse,"Akamai Technologies, Inc.",64
+22,US,lighthouse,Amazon,64
+23,JP,lighthouse,Amazon,64
+24,CA,lighthouse,OVH SAS,64
+25,SG,lighthouse,OVH SAS,64
+26,AT,lighthouse,Nessus GmbH,64
+27,US,lighthouse,Amazon,64
+28,AU,lighthouse,OVH SAS,64
+29,GB,nimbus,Hydra Communications Ltd,64
+30,DE,nimbus,Hetzner Online GmbH,64
+31,HK,prysm,Google LLC,64
+32,CA,lighthouse,TELUS Communications Inc,64
+33,US,nimbus,AT&T,64
+34,US,lighthouse,Amazon,64
+35,IE,prysm,Amazon,64
+36,US,lighthouse,Amazon,64
+37,CZ,nimbus,Vodafone,64
+38,US,lighthouse,Amazon,64
+39,US,prysm,"HIVELOCITY, Inc.",64
+40,GB,teku,OVH SAS,64
+41,AT,teku,UPC Technology,64
+42,DE,prysm,Google LLC,64
+43,DE,teku,Equinix (EMEA) Acquisition Enterprises B.V.,64
+44,JP,lighthouse,Amazon,64
+45,DE,prysm,OVH SAS,64
+46,US,lighthouse,Amazon,64
+47,JP,lighthouse,Amazon,64
+48,NL,prysm,Google LLC,64
+49,FI,prysm,Hetzner Online GmbH,64
+50,US,lighthouse,"Akamai Technologies, Inc.",64
+51,US,lighthouse,Amazon,64
+52,FI,nimbus,Hetzner Online GmbH,64
+53,GB,lighthouse,OVH SAS,64
+54,US,lighthouse,AT&T,64
+55,GB,teku,G.Network Communications Limited,64
+56,GB,teku,OVH SAS,64
+57,US,lighthouse,Allnodes Inc,64
+58,US,lighthouse,Amazon,64
+59,US,lighthouse,Amazon,64
+60,NL,teku,WorldStream B.V.,64
+61,JP,lighthouse,Amazon,64
+62,AU,teku,"DigitalOcean, LLC",64
+63,US,lighthouse,Amazon,64
+64,LU,nimbus,"Servers.com, Inc.",64
+65,FR,lighthouse,"Akamai Technologies, Inc.",64
+66,DE,lighthouse,LeaseWeb DE,64
+67,NL,prysm,WorldStream B.V.,64
+68,US,teku,Latitude.sh,64
+69,JP,lighthouse,Amazon,64
+70,US,lighthouse,Amazon,64
+71,US,lighthouse,OVH SAS,64
+72,GB,nimbus,Hydra Communications Ltd,64
+73,JP,lighthouse,Amazon,64
+74,AU,lighthouse,OVH SAS,64
+75,US,prysm,Amazon,64
+76,DE,teku,OVH SAS,64
+77,JP,lighthouse,Amazon,64
+78,DE,lighthouse,LeaseWeb DE,64
+79,US,lighthouse,Amazon,64
+80,CA,lighthouse,OVH SAS,64
+81,CH,prysm,Google LLC,64
+82,US,lighthouse,Amazon,64
+83,US,lighthouse,Amazon,64
+84,DE,prysm,UpCloud Ltd,64
+85,US,lighthouse,Amazon,64
+86,FR,lighthouse,"Akamai Technologies, Inc.",64
+87,US,lighthouse,Amazon,64
+88,US,lighthouse,Amazon,64
+89,FI,nimbus,Hetzner Online GmbH,64
+90,NL,nimbus,FCN,64
+91,GB,prysm,UpCloud Ltd,64
+92,US,lighthouse,Amazon,64
+93,FI,teku,Hetzner Online GmbH,64
+94,GB,lighthouse,Leaseweb UK Limited,64
+95,IE,lighthouse,Amazon,64
+96,FI,teku,Hetzner Online GmbH,64
+97,DE,lighthouse,Hetzner Online GmbH,64
+98,US,lighthouse,Amazon,64
+99,JP,lighthouse,Amazon,64
+100,US,lighthouse,Amazon,64
+101,DE,lighthouse,Allnodes Inc,64
+102,US,lighthouse,"Akamai Technologies, Inc.",64
+103,AU,nimbus,Vocus PTY LTD,64
+104,JP,lighthouse,Amazon,64
+105,US,lighthouse,Amazon,64
+106,US,teku,OVH SAS,64
+107,US,lighthouse,Amazon,64
+108,US,prysm,Amazon,64
+109,FR,nimbus,OVH SAS,64
+110,US,lighthouse,"Akamai Technologies, Inc.",64
+111,US,lighthouse,Amazon,64
+112,FR,teku,OVH SAS,64
+113,FR,nimbus,OVH SAS,64
+114,US,lighthouse,Frontier,64
+115,US,lighthouse,Amazon,64
+116,MD,prysm,Alexhost SRL,64
+117,IE,lighthouse,Amazon,64
+118,DE,lighthouse,Hetzner Online GmbH,64
+119,GB,teku,Hydra Communications Ltd,64
+120,SG,lighthouse,OVH SAS,64
+121,MD,nimbus,amplica,64
+122,DE,prysm,Hetzner Online GmbH,64
+123,US,prysm,Google LLC,64
+124,US,lighthouse,Amazon,64
+125,CA,lighthouse,OVH SAS,64
+126,US,lighthouse,Amazon,64
+127,US,lighthouse,Amazon,64
+128,FI,lighthouse,Hetzner Online GmbH,64
+129,DK,lighthouse,Sagitta ApS,64
+130,DE,teku,Amazon,64
+131,GB,teku,Hydra Communications Ltd,64
+132,US,lighthouse,Verizon,64
+133,US,lighthouse,Amazon,64
+134,US,lighthouse,Amazon,64
+135,DE,grandine,Hetzner Online GmbH,64
+136,DE,lighthouse,Hetzner Online GmbH,64
+137,LT,teku,UAB Cherry Servers,64
+138,TH,teku,Triple T Broadband,64
+139,NL,lighthouse,UAB Cherry Servers,64
+140,US,lighthouse,Amazon,64
+141,MD,nimbus,amplica,64
+142,GB,lighthouse,OVH SAS,64
+143,JP,lighthouse,Amazon,64
+144,GB,prysm,UpCloud Ltd,64
+145,FI,teku,Hetzner Online GmbH,64
+146,SE,prysm,Amazon,64
+147,FR,prysm,OVH SAS,64
+148,US,lighthouse,Charter,64
+149,US,lighthouse,Google Fiber,64
+150,DE,prysm,UpCloud Ltd,64
+151,CA,lighthouse,Google LLC,64
+152,GB,prysm,UpCloud Ltd,64
+153,CA,lighthouse,Bell,64
+154,JP,lighthouse,Amazon,64
+155,CA,lighthouse,OVH SAS,64
+156,US,lighthouse,Amazon,64
+157,FR,teku,OVH SAS,64
+158,GB,lighthouse,OVH SAS,64
+159,US,lighthouse,AT&T,64
+160,IE,teku,Amazon,64
+161,US,lighthouse,Amazon,64
+162,US,lighthouse,Amazon,64
+163,US,lighthouse,Comcast,64
+164,US,lighthouse,"Akamai Technologies, Inc.",64
+165,JP,lighthouse,Amazon,64
+166,AU,nimbus,"DigitalOcean, LLC",64
+167,US,lighthouse,Verizon,64
+168,US,lighthouse,Amazon,64
+169,US,lighthouse,Amazon,64
+170,AT,nimbus,Nessus GmbH,64
+171,GB,nimbus,Hydra Communications Ltd,64
+172,US,lighthouse,Amazon,64
+173,MD,nimbus,amplica,64
+174,DE,prysm,UpCloud Ltd,64
+175,FI,lighthouse,Hetzner Online GmbH,64
+176,GB,nimbus,OVH SAS,64
+177,US,lighthouse,Amazon,64
+178,GB,teku,OVH SAS,64
+179,US,lighthouse,Amazon,64
+180,FI,lighthouse,Hetzner Online GmbH,64
+181,US,lighthouse,"Akamai Technologies, Inc.",64
+182,US,lighthouse,Amazon,64
+183,AT,nimbus,Nessus GmbH,64
+184,JP,lighthouse,Amazon,64
+185,JP,lighthouse,Amazon,64
+186,CH,nimbus,Swisscom (Schweiz) AG,64
+187,GB,lighthouse,OVH SAS,64
+188,GB,nimbus,Hydra Communications Ltd,64
+189,GB,nimbus,Hydra Communications Ltd,64
+190,CA,lighthouse,OVH SAS,64
+191,GB,nimbus,OVH SAS,64
+192,MD,nimbus,amplica,64
+193,US,lighthouse,Amazon,64
+194,JP,lighthouse,Amazon,64
+195,FI,nimbus,Hetzner Online GmbH,64
+196,PL,nimbus,OVH SAS,64
+197,MD,nimbus,amplica,64
+198,FI,lighthouse,Hetzner Online GmbH,64
+199,GB,nimbus,Amazon,64
+200,US,nimbus,Comcast,64
+201,MD,nimbus,amplica,64
+202,US,lighthouse,Amazon,64
+203,MD,nimbus,Inovare-Prim SRL,64
+204,PT,lighthouse,PT Comunicacoes S.A.,64
+205,FI,lighthouse,Hetzner Online GmbH,64
+206,CZ,lighthouse,RADIOKOMUNIKACE a.s.,64
+207,NL,nimbus,FCN,64
+208,US,lighthouse,Amazon,64
+209,US,lighthouse,Amazon,64
+210,MD,nimbus,amplica,64
+211,FR,nimbus,OVH SAS,64
+212,US,lighthouse,Amazon,64
+213,US,lighthouse,Amazon,64
+214,US,nimbus,Comcast,64
+215,GB,nimbus,OVH SAS,64
+216,AU,nimbus,Vocus PTY LTD,64
+217,NL,nimbus,"DigitalOcean, LLC",64
+218,FR,lighthouse,OVH SAS,64
+219,US,nimbus,Comcast,64
+220,NL,nimbus,FCN,64
+221,GB,lighthouse,OVH SAS,64
+222,CA,lighthouse,Whipcord Ltd.,64
+223,AT,nimbus,Liberty Global Operations B.V,64
+224,US,lighthouse,Amazon,64
+225,MD,nimbus,Inovare-Prim SRL,64
+226,FR,lighthouse,Amazon,64
+227,DE,nimbus,Vodafone,64
+228,MD,nimbus,amplica,64
+229,US,nimbus,BIG BEND,64
+230,US,lighthouse,Amazon,64
+231,MD,nimbus,amplica,64
+232,GB,lighthouse,Amazon,64
+233,GB,lighthouse,OVH SAS,64
+234,MD,nimbus,amplica,64
+235,US,lighthouse,Amazon,64
+236,IE,lighthouse,Amazon,64
+237,US,teku,AT&T,64
+238,US,lighthouse,Amazon,64
+239,IE,teku,Amazon,64
+240,US,teku,Comcast,64
+241,LT,lighthouse,Dedicated servers,64
+242,US,lighthouse,Amazon,64
+243,GB,nimbus,Hydra Communications Ltd,64
+244,NL,teku,"DigitalOcean, LLC",64
+245,AT,lighthouse,Nessus GmbH,64
+246,HK,prysm,Google LLC,64
+247,DE,teku,Amazon,64
+248,US,lighthouse,Amazon,64
+249,US,lighthouse,Comcast,64
+250,GB,teku,Hydra Communications Ltd,64
+251,DE,lighthouse,Allnodes Inc,64
+252,DE,lighthouse,Hetzner Online GmbH,64
+253,US,teku,AT&T,64
+254,GB,teku,ONYX,64
+255,GB,teku,Hydra Communications Ltd,64
+256,IE,teku,Amazon,64
+257,DE,prysm,Amazon,64
+258,GB,nimbus,OVH SAS,64
+259,FR,teku,OVH SAS,64
+260,US,lighthouse,Amazon,64
+261,IE,prysm,Amazon,64
+262,US,lighthouse,Amazon,64
+263,IE,lighthouse,Amazon,64
+264,DE,teku,Amazon,64
+265,US,lighthouse,Charter,64
+266,US,nimbus,AT&T,64
+267,GB,nimbus,OVH SAS,64
+268,US,lighthouse,Amazon,64
+269,US,prysm,Amazon,64
+270,US,lighthouse,Amazon,64
+271,NL,lighthouse,KPN N.V.,64
+272,PL,nimbus,OVH SAS,64
+273,DE,lighthouse,Hetzner Online GmbH,64
+274,US,lighthouse,Amazon,64
+275,CH,lighthouse,Amazon,64
+276,GB,lighthouse,OVH SAS,64
+277,JP,lighthouse,Amazon,64
+278,US,nimbus,AT&T,64
+279,US,lighthouse,Amazon,64
+280,NL,nimbus,FCN,64
+281,FI,nimbus,DNA Oyj,64
+282,DE,teku,OVH SAS,64
+283,SG,prysm,OVH Hosting,64
+284,IE,lighthouse,Amazon,64
+285,US,prysm,Amazon,64
+286,US,lighthouse,Amazon,64
+287,US,prysm,AT&T,64
+288,US,lighthouse,Amazon,64
+289,JP,lighthouse,Amazon,64
+290,US,lighthouse,Amazon,64
+291,FR,teku,OVH SAS,64
+292,SG,lighthouse,Amazon,64
+293,HK,prysm,Google LLC,64
+294,GB,lighthouse,Leaseweb UK Limited,64
+295,GB,nimbus,OVH SAS,64
+296,GB,teku,Hydra Communications Ltd,64
+297,DE,lighthouse,Amazon,64
+298,US,lighthouse,Amazon,64
+299,GB,lodestar,OVH SAS,64
+300,FR,teku,OVH SAS,64
+301,US,lighthouse,Amazon,64
+302,US,lighthouse,Amazon,64
+303,US,lighthouse,Amazon,64
+304,FR,teku,Amazon,64
+305,GB,teku,OVH SAS,64
+306,DE,lighthouse,Latitude.sh,64
+307,CA,lighthouse,OVH SAS,64
+308,US,lighthouse,Amazon,64
+309,DE,lighthouse,gridscale GmbH,64
+310,US,teku,AT&T,64
+311,US,lighthouse,Amazon,64
+312,CA,lighthouse,OVH SAS,64
+313,US,lighthouse,Amazon,64
+314,US,lighthouse,OVH SAS,64
+315,GB,lighthouse,Amazon,64
+316,KR,lighthouse,KORNET,64
+317,US,lighthouse,AT&T,64
+318,MD,nimbus,amplica,64
+319,DE,grandine,Hetzner Online GmbH,64
+320,SG,prysm,Amazon,64
+321,US,lighthouse,OVH SAS,64
+322,US,lighthouse,Amazon,64
+323,US,lighthouse,Amazon,64
+324,HK,prysm,Google LLC,64
+325,SG,lighthouse,Amazon,64
+326,JP,lighthouse,Amazon,64
+327,HK,prysm,Google LLC,64
+328,CZ,nimbus,DataCamp Limited,64
+329,US,prysm,Google LLC,64
+330,GB,teku,OVH SAS,64
+331,US,lighthouse,Amazon,64
+332,US,lighthouse,Amazon,64
+333,FI,grandine,Hetzner Online GmbH,64
+334,FI,lighthouse,Hetzner Online GmbH,64
+335,DE,teku,Amazon,64
+336,JP,lighthouse,Amazon,64
+337,NL,teku,WorldStream B.V.,64
+338,CH,lighthouse,Cyberlink AG,64
+339,US,prysm,"HIVELOCITY, Inc.",64
+340,US,lighthouse,Amazon,64
+341,FR,lighthouse,OVH SAS,64
+342,US,lighthouse,Amazon,64
+343,US,lighthouse,Amazon,64
+344,FR,lighthouse,OVH SAS,64
+345,US,lighthouse,Amazon,64
+346,DE,teku,Hetzner Online GmbH,64
+347,US,lighthouse,Amazon,64
+348,HK,prysm,PCCW IMS Limited,64
+349,NL,lighthouse,"DigitalOcean, LLC",64
+350,DE,prysm,UpCloud Ltd,64
+351,US,prysm,Amazon,64
+352,US,lighthouse,Amazon,64
+353,US,lighthouse,OVH SAS,64
+354,PL,teku,OVH SAS,64
+355,IE,teku,Amazon,64
+356,FR,lighthouse,"Akamai Technologies, Inc.",64
+357,US,grandine,Amazon,64
+358,US,lighthouse,Amazon,64
+359,GB,nimbus,Hydra Communications Ltd,64
+360,US,lighthouse,Amazon,64
+361,FR,lighthouse,"Akamai Technologies, Inc.",64
+362,IE,lighthouse,Amazon,64
+363,US,lighthouse,Amazon,64
+364,MD,nimbus,amplica,64
+365,US,lighthouse,"Akamai Technologies, Inc.",64
+366,MD,nimbus,amplica,64
+367,PT,lighthouse,PT Comunicacoes S.A.,64
+368,US,nimbus,Comcast,64
+369,GB,nimbus,OVH SAS,64
+370,SE,prysm,Amazon,64
+371,US,lighthouse,Amazon,64
+372,JP,lighthouse,Amazon,64
+373,FR,lighthouse,OVH SAS,64
+374,US,lighthouse,Amazon,64
+375,US,lighthouse,Latitude.sh,64
+376,GB,lighthouse,Amazon,64
+377,US,lighthouse,Amazon,64
+378,CA,lighthouse,OVH SAS,64
+379,DE,nimbus,Hetzner Online GmbH,64
+380,DE,lighthouse,Hetzner Online GmbH,64
+381,US,nimbus,Charles River Operation,64
+382,AT,nimbus,Nessus GmbH,64
+383,DE,lighthouse,Hetzner Online GmbH,64
+384,US,lighthouse,Charter,64
+385,MD,nimbus,amplica,64
+386,US,lighthouse,Amazon,64
+387,US,lighthouse,Amazon,64
+388,MD,nimbus,amplica,64
+389,CZ,lighthouse,Network of Ignum s.r.o,64
+390,US,lighthouse,Charter,64
+391,MD,nimbus,amplica,64
+392,CH,lighthouse,Amazon,64
+393,SG,lighthouse,OVH SAS,64
+394,MD,nimbus,amplica,64
+395,DE,nimbus,Hetzner Online GmbH,64
+396,DE,nimbus,OVH SAS,64
+397,MD,nimbus,amplica,64
+398,SG,lighthouse,"Singapore Telecommunications Ltd, Magix Services",64
+399,US,nimbus,OVH SAS,64
+400,FI,nimbus,Hetzner Online GmbH,64
+401,US,lighthouse,Verizon,64
+402,MD,nimbus,amplica,64
+403,MD,nimbus,Inovare-Prim SRL,64
+404,DE,nimbus,Hetzner Online GmbH,64
+405,GB,prysm,TeraSwitch,64
+406,US,lighthouse,Amazon,64
+407,DE,teku,OVH SAS,64
+408,US,lighthouse,Amazon,64
+409,CH,lighthouse,iWay AG,64
+410,PL,teku,OVH SAS,64
+411,KR,teku,Korea Telecom,64
+412,AT,teku,Nessus GmbH,64
+413,FI,lighthouse,Hetzner Online GmbH,64
+414,LT,teku,Cherry Servers,64
+415,FR,lighthouse,OVH SAS,64
+416,US,teku,Amazon,64
+417,CZ,prysm,RADIOKOMUNIKACE a.s.,64
+418,US,prysm,Google LLC,64
+419,CH,nimbus,Swisscom (Schweiz) AG,64
+420,GB,lighthouse,OVH SAS,64
+421,DE,lighthouse,Latitude.sh,64
+422,US,lighthouse,Amazon,64
+423,FR,lighthouse,OVH SAS,64
+424,CH,lighthouse,Cyberlink AG,64
+425,AU,lighthouse,Aussie Broadband,64
+426,US,teku,Amazon,64
+427,IE,teku,Amazon,64
+428,GB,nimbus,Hydra Communications Ltd,64
+429,MD,nimbus,amplica,64
+430,US,lighthouse,"Akamai Technologies, Inc.",64
+431,MD,nimbus,amplica,64
+432,GB,teku,Amazon,64
+433,US,lighthouse,Allnodes Inc,64
+434,US,lighthouse,Amazon,64
+435,DE,lighthouse,Hetzner Online GmbH,64
+436,US,lighthouse,Amazon,64
+437,PL,teku,OVH SAS,64
+438,US,lighthouse,Amazon,64
+439,IE,teku,Amazon,64
+440,US,lighthouse,Amazon,64
+441,DE,lighthouse,Leaseweb Deutschland GmbH,64
+442,FI,lighthouse,Hetzner Online GmbH,64
+443,CA,lighthouse,Shaw Communications Inc.,64
+444,FR,lighthouse,"Akamai Technologies, Inc.",64
+445,LU,teku,"Servers.com, Inc.",64
+446,US,lighthouse,Amazon,64
+447,CA,lighthouse,OVH SAS,64
+448,AT,lighthouse,Nessus GmbH,64
+449,AT,teku,Nessus GmbH,64
+450,US,lighthouse,Amazon,64
+451,US,lighthouse,"Akamai Technologies, Inc.",64
+452,DE,teku,Hetzner Online GmbH,64
+453,GB,prysm,UpCloud Ltd,64
+454,US,lighthouse,OVH SAS,64
+455,NL,prysm,WorldStream B.V.,64
+456,US,lighthouse,Amazon,64
+457,US,teku,AT&T,64
+458,US,lighthouse,Verizon,64
+459,GB,teku,OVH SAS,64
+460,CZ,prysm,"Quantcom, a.s.",64
+461,FI,lighthouse,Hetzner Online GmbH,64
+462,US,lighthouse,Amazon,64
+463,US,lighthouse,Amazon,64
+464,US,nimbus,AT&T,64
+465,FR,lighthouse,OVH SAS,64
+466,IE,lighthouse,Amazon,64
+467,FI,teku,Hetzner Online GmbH,64
+468,DE,lighthouse,Hetzner Online GmbH,64
+469,US,lighthouse,Amazon,64
+470,US,lighthouse,Amazon,64
+471,AT,teku,Nessus GmbH,64
+472,US,lighthouse,Amazon,64
+473,US,teku,Microsoft Corporation,64
+474,FR,teku,OVH SAS,64
+475,US,lighthouse,Amazon,64
+476,US,lighthouse,"Akamai Technologies, Inc.",64
+477,US,lighthouse,Hotwire Communications,64
+478,FI,lighthouse,Hetzner Online GmbH,64
+479,US,lighthouse,Latitude.sh,64
+480,JP,lighthouse,Amazon,64
+481,US,lighthouse,Amazon,64
+482,JP,lighthouse,Amazon,64
+483,FI,teku,Hetzner Online GmbH,64
+484,CH,lighthouse,CloudSigma,64
+485,JP,lighthouse,Amazon,64
+486,DE,prysm,UpCloud Ltd,64
+487,US,lighthouse,Amazon,64
+488,AT,lighthouse,Nessus GmbH,64
+489,US,lighthouse,Amazon,64
+490,US,lighthouse,Amazon,64
+491,US,teku,CenturyLink,64
+492,SG,prysm,OVH Hosting,64
+493,US,lighthouse,Amazon,64
+494,US,lighthouse,"Akamai Technologies, Inc.",64
+495,FI,grandine,Hetzner Online GmbH,64
+496,AU,lighthouse,Amazon,64
+497,MD,nimbus,amplica,64
+498,US,lighthouse,Amazon,64
+499,US,lighthouse,Amazon,64
+500,US,lighthouse,Amazon,64
+501,CH,lighthouse,CloudSigma,64
+502,US,lighthouse,OVH SAS,64
+503,FR,lighthouse,Amazon,64
+504,AT,prysm,Nessus GmbH,64
+505,SG,lighthouse,Amazon,64
+506,US,prysm,Oracle Corporation,64
+507,CH,lighthouse,Amazon,64
+508,US,lighthouse,Amazon,64
+509,FR,teku,OVH SAS,64
+510,US,lighthouse,Amazon,64
+511,US,lighthouse,Amazon,64
+512,US,prysm,Amazon,64
+513,US,lighthouse,Fuse Internet Access,64
+514,US,teku,Amazon,64
+515,DE,teku,OVH SAS,64
+516,US,lighthouse,Amazon,64
+517,US,lighthouse,Amazon,64
+518,US,lighthouse,Comcast,64
+519,JP,lighthouse,Amazon,64
+520,FI,prysm,Hetzner Online GmbH,64
+521,FR,lighthouse,MCPECloud SAS,64
+522,AT,nimbus,Nessus GmbH,64
+523,GB,teku,Amazon,64
+524,US,lighthouse,M247 Europe Infra,64
+525,FR,teku,Amazon,64
+526,MD,nimbus,amplica,64
+527,US,lighthouse,Amazon,64
+528,US,lighthouse,Amazon,64
+529,DE,prysm,Akamai Technologies,64
+530,DE,teku,OVH SAS,64
+531,US,lighthouse,Charter,64
+532,US,lighthouse,Amazon,64
+533,US,lighthouse,Amazon,64
+534,US,lighthouse,Amazon,64
+535,DE,prysm,"The Constant Company, LLC",64
+536,US,lighthouse,Amazon,64
+537,US,prysm,"HIVELOCITY, Inc.",64
+538,US,lighthouse,Clarksville Department of Electricity,64
+539,US,prysm,Amazon,64
+540,JP,lighthouse,Amazon,64
+541,JP,lighthouse,Amazon,64
+542,US,lighthouse,Amazon,64
+543,US,lighthouse,Allnodes Inc,64
+544,IE,lighthouse,Amazon,64
+545,US,lighthouse,Amazon,64
+546,US,teku,AT&T,64
+547,FR,lighthouse,OVH SAS,64
+548,US,lighthouse,Amazon,64
+549,IE,lighthouse,Amazon,64
+550,US,lighthouse,Amazon,64
+551,JP,lighthouse,Amazon,64
+552,JP,lighthouse,Amazon,64
+553,US,lighthouse,Amazon,64
+554,US,lighthouse,Amazon,64
+555,DE,lighthouse,Hetzner Online GmbH,64
+556,BR,lighthouse,V tal,64
+557,US,lighthouse,Amazon,64
+558,US,lighthouse,Amazon,64
+559,US,lighthouse,Amazon,64
+560,FI,teku,Hetzner Online GmbH,64
+561,CA,lighthouse,Whipcord Ltd.,64
+562,JP,lighthouse,Amazon,64
+563,US,lighthouse,AT&T,64
+564,US,lighthouse,Amazon,64
+565,US,lighthouse,Amazon,64
+566,US,lighthouse,Verizon,64
+567,GB,prysm,UpCloud Ltd,64
+568,GB,lighthouse,OVH SAS,64
+569,IE,teku,Amazon,64
+570,US,lighthouse,Amazon,64
+571,US,teku,AT&T,64
+572,US,lighthouse,Amazon,64
+573,US,lighthouse,Amazon,64
+574,US,prysm,Oracle Corporation,64
+575,SG,prysm,OVH Hosting,64
+576,IE,prysm,Amazon,64
+577,US,lighthouse,Amazon,64
+578,JP,lighthouse,Amazon,64
+579,DE,grandine,Hetzner Online GmbH,64
+580,GB,teku,OVH SAS,64
+581,FR,lighthouse,OVH SAS,64
+582,DE,teku,Hetzner Online GmbH,64
+583,US,prysm,Amazon,64
+584,FI,prysm,Hetzner Online GmbH,64
+585,DE,prysm,OVH SAS,64
+586,US,lighthouse,Amazon,64
+587,GB,teku,Hydra Communications Ltd,64
+588,HK,prysm,Google LLC,64
+589,FR,lighthouse,OVH SAS,64
+590,US,lighthouse,Amazon,64
+591,US,lighthouse,Amazon,64
+592,AT,teku,Nessus GmbH,64
+593,US,lighthouse,Amazon,64
+594,US,lighthouse,Amazon,64
+595,GB,lighthouse,OVH SAS,64
+596,US,lighthouse,Amazon,64
+597,DE,prysm,Google LLC,64
+598,US,prysm,Comcast,64
+599,US,lighthouse,"Interserver, Inc",64
+600,IE,lighthouse,Virgin Media Ireland,64
+601,US,lighthouse,Amazon,64
+602,US,lighthouse,Amazon,64
+603,AU,teku,OVH SAS,64
+604,GB,prysm,UpCloud Ltd,64
+605,JP,lighthouse,Amazon,64
+606,GB,lighthouse,OVH SAS,64
+607,CH,lighthouse,Cyberlink AG,64
+608,BE,prysm,Google LLC,64
+609,US,lighthouse,Amazon,64
+610,FR,lighthouse,Amazon,64
+611,JP,lighthouse,Amazon,64
+612,JP,prysm,Amazon,64
+613,US,lighthouse,UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED,64
+614,DE,teku,Hetzner Online GmbH,64
+615,DE,teku,Hetzner Online GmbH,64
+616,SG,lighthouse,"Singapore Telecommunications Ltd, Magix Services",64
+617,CA,lighthouse,Google LLC,64
+618,SG,lighthouse,OVH SAS,64
+619,MD,nimbus,amplica,64
+620,GB,prysm,UpCloud Ltd,64
+621,US,lighthouse,Amazon,64
+622,DE,teku,NorthC Deutschland GmbH,64
+623,AT,lighthouse,Nessus GmbH,64
+624,FI,prysm,Hetzner Online GmbH,64
+625,FR,nimbus,OVH SAS,64
+626,GB,lighthouse,OVH SAS,64
+627,US,lighthouse,Amazon,64
+628,DE,lighthouse,Latitude.sh,64
+629,US,lighthouse,"Akamai Technologies, Inc.",64
+630,US,lighthouse,Amazon,64
+631,FR,prysm,OVH SAS,64
+632,US,lighthouse,Charter,64
+633,US,teku,OVH SAS,64
+634,US,lighthouse,Amazon,64
+635,CA,lighthouse,Google LLC,64
+636,AT,prysm,Nessus GmbH,64
+637,DE,prysm,UpCloud Ltd,64
+638,GB,prysm,UpCloud Ltd,64
+639,AT,teku,Nessus GmbH,64
+640,IE,lighthouse,Amazon,64
+641,DE,lighthouse,Latitude.sh,64
+642,GB,teku,Amazon,64
+643,GB,nimbus,Hydra Communications Ltd,64
+644,IE,lighthouse,Amazon,64
+645,GB,lighthouse,Leaseweb UK Limited,64
+646,US,lighthouse,Amazon,64
+647,LT,lighthouse,UAB Cherry Servers,64
+648,AU,lighthouse,Google LLC,64
+649,US,lighthouse,Amazon,64
+650,NL,prysm,Google LLC,64
+651,TW,teku,Chunghwa Telecom,64
+652,DE,nimbus,Hetzner Online GmbH,64
+653,US,lighthouse,Amazon,64
+654,DE,nimbus,Equinix (EMEA) Acquisition Enterprises B.V.,64
+655,US,lighthouse,Amazon,64
+656,US,lighthouse,Amazon,64
+657,SG,prysm,Amazon,64
+658,GB,teku,OVH SAS,64
+659,US,lighthouse,Amazon,64
+660,US,lighthouse,Amazon,64
+661,JP,lighthouse,Amazon,64
+662,US,lighthouse,Amazon,64
+663,US,lighthouse,Amazon,64
+664,US,lighthouse,Amazon,64
+665,FI,nimbus,Hetzner Online GmbH,64
+666,CA,grandine,Shaw Communications Inc.,64
+667,US,lighthouse,Amazon,64
+668,FR,lighthouse,"Akamai Technologies, Inc.",64
+669,US,lighthouse,Amazon,64
+670,CH,teku,Amazon,64
+671,US,lighthouse,Amazon,64
+672,DE,lighthouse,Hetzner Online GmbH,64
+673,US,lighthouse,"Akamai Technologies, Inc.",64
+674,JP,lighthouse,Amazon,64
+675,FI,lighthouse,Hetzner Online GmbH,64
+676,US,prysm,Amazon,64
+677,US,nimbus,Frontier,64
+678,CH,nimbus,Swisscom (Schweiz) AG,64
+679,CH,nimbus,Salt Mobile,64
+680,JP,lighthouse,Amazon,64
+681,US,lighthouse,Amazon,64
+682,FR,nimbus,OVH SAS,64
+683,DE,nimbus,Amazon,64
+684,MD,nimbus,amplica,64
+685,US,lighthouse,Google LLC,64
+686,US,lighthouse,Amazon,64
+687,DE,lighthouse,Netversor GmbH,64
+688,IE,lighthouse,Amazon,64
+689,FI,nimbus,Hetzner Online GmbH,64
+690,MD,nimbus,Inovare-Prim SRL,64
+691,MD,nimbus,amplica,64
+692,FR,lighthouse,OVH SAS,64
+693,DE,lighthouse,Hetzner Online GmbH,64
+694,FR,lighthouse,"Akamai Technologies, Inc.",64
+695,US,lighthouse,"Akamai Technologies, Inc.",64
+696,US,lighthouse,Amazon,64
+697,US,lighthouse,Amazon,64
+698,AU,lighthouse,"DigitalOcean, LLC",64
+699,US,lighthouse,Cincinnati Bell Telephone Company LLC,64
+700,US,nimbus,Frontier,64
+701,US,teku,Google LLC,64
+702,US,lighthouse,Amazon,64
+703,US,lighthouse,Amazon,64
+704,DE,grandine,Hetzner Online GmbH,64
+705,MD,nimbus,amplica,64
+706,US,nimbus,Comcast,64
+707,MD,nimbus,amplica,64
+708,ES,nimbus,Fitel Network S.L.,64
+709,FR,nimbus,Ikoula Ripe,64
+710,US,lighthouse,Amazon,64
+711,FR,nimbus,OVH SAS,64
+712,DE,lighthouse,gridscale GmbH,64
+713,DE,lighthouse,Allnodes Inc,64
+714,MD,nimbus,Inovare-Prim SRL,64
+715,DE,lighthouse,OVH SAS,64
+716,US,lighthouse,Amazon,64
+717,US,nimbus,Comcast,64
+718,DE,nimbus,netcup GmbH,64
+719,JP,lighthouse,Amazon,64
+720,US,nimbus,Verizon,64
+721,MD,nimbus,amplica,64
+722,GB,teku,OVH SAS,64
+723,US,lighthouse,Amazon,64
+724,DE,teku,Hetzner Online GmbH,64
+725,US,lighthouse,Amazon,64
+726,US,nimbus,"DigitalOcean, LLC",64
+727,FI,nimbus,Hetzner Online GmbH,64
+728,US,lighthouse,Amazon,64
+729,US,lighthouse,Amazon,64
+730,ZA,nimbus,Cool Ideas Service Provider (Pty) Ltd,64
+731,GB,lighthouse,Leaseweb UK Limited,64
+732,DE,lighthouse,Amazon,64
+733,GB,teku,Pulsant (Scotland) Ltd,64
+734,US,lighthouse,Amazon,64
+735,US,lighthouse,Amazon,64
+736,MD,nimbus,amplica,64
+737,FR,lighthouse,"Akamai Technologies, Inc.",64
+738,US,lighthouse,Amazon,64
+739,US,lighthouse,Amazon,64
+740,MD,nimbus,amplica,64
+741,US,lighthouse,Amazon,64
+742,MD,nimbus,amplica,64
+743,US,lighthouse,Amazon,64
+744,US,lighthouse,Amazon,64
+745,JP,lighthouse,Amazon,64
+746,CA,lighthouse,OVH SAS,64
+747,DE,teku,Hetzner Online GmbH,64
+748,DE,lighthouse,netcup GmbH,64
+749,DE,teku,Hetzner Online GmbH,64
+750,GB,teku,Hydra Communications Ltd,64
+751,DE,lighthouse,Amazon,64
+752,JP,lighthouse,Amazon,64
+753,CH,teku,Amazon,64
+754,AU,lighthouse,Amazon,64
+755,US,lighthouse,Suddenlink Communications,64
+756,CH,lighthouse,CloudSigma,64
+757,JP,lighthouse,Amazon,64
+758,IE,lighthouse,Amazon,64
+759,US,lighthouse,Amazon,64
+760,JP,lighthouse,Amazon,64
+761,US,lighthouse,Latitude.sh,64
+762,SG,prysm,OVH Hosting,64
+763,MD,nimbus,amplica,64
+764,GB,nimbus,Hydra Communications Ltd,64
+765,DE,lighthouse,Leaseweb DE,64
+766,DE,lighthouse,Hetzner Online GmbH,64
+767,FI,nimbus,Hetzner Online GmbH,64
+768,US,teku,OVH SAS,64
+769,GB,nimbus,Hydra Communications Ltd,64
+770,US,lighthouse,Amazon,64
+771,AT,teku,Nessus GmbH,64
+772,DE,nimbus,Hetzner Online GmbH,64
+773,DE,nimbus,Hetzner Online GmbH,64
+774,HK,prysm,Google LLC,64
+775,US,lighthouse,"Akamai Technologies, Inc.",64
+776,CH,lighthouse,Daedalean AG,64
+777,FR,lighthouse,"Akamai Technologies, Inc.",64
+778,US,lighthouse,Amazon,64
+779,NL,lighthouse,Vodafone,64
+780,IE,prysm,Amazon,64
+781,US,lighthouse,Amazon,64
+782,AU,teku,OVH SAS,64
+783,FI,lodestar,Hetzner Online GmbH,64
+784,CZ,lighthouse,Nej.cz s.r.o,64
+785,DE,lighthouse,gridscale GmbH,64
+786,JP,lighthouse,Amazon,64
+787,GB,lighthouse,My Mind (Holdings) Ltd,64
+788,FR,nimbus,OVH SAS,64
+789,FI,lighthouse,Hetzner Online GmbH,64
+790,US,prysm,Google LLC,64
+791,IS,lighthouse,Hringdu ehf,64
+792,US,lighthouse,Amazon,64
+793,US,prysm,Amazon,64
+794,US,nimbus,Verizon,64
+795,FR,prysm,OVH SAS,64
+796,US,lighthouse,Amazon,64
+797,US,lighthouse,Amazon,64
+798,DE,prysm,Google LLC,64
+799,US,prysm,"Akamai Technologies, Inc.",64
+800,CH,lighthouse,Cyberlink AG,64
+801,US,lighthouse,Amazon,64
+802,JP,lighthouse,Amazon,64
+803,AU,lighthouse,Google LLC,64
+804,CH,teku,Amazon,64
+805,US,lighthouse,Amazon,64
+806,GB,lighthouse,OVH SAS,64
+807,IE,lighthouse,Amazon,64
+808,US,lighthouse,Amazon,64
+809,NL,lighthouse,LeaseWeb Netherlands B.V.,64
+810,DE,prysm,OVH SAS,64
+811,DE,lighthouse,Hetzner Online GmbH,64
+812,FI,grandine,Hetzner Online GmbH,64
+813,DE,lighthouse,Leaseweb Deutschland GmbH,64
+814,NL,lighthouse,KPN BV,64
+815,NL,teku,UAB Cherry Servers,64
+816,PL,lighthouse,OVH SAS,64
+817,DE,prysm,OVH SAS,64
+818,JP,lighthouse,Amazon,64
+819,JP,lighthouse,Amazon,64
+820,JP,lighthouse,Amazon,64
+821,GB,prysm,UpCloud Ltd,64
+822,CH,lighthouse,Init7 (Switzerland) Ltd.,64
+823,US,lighthouse,Amazon,64
+824,US,nimbus,AT&T,64
+825,MD,nimbus,amplica,64
+826,GB,prysm,UpCloud Ltd,64
+827,US,teku,AT&T,64
+828,FI,grandine,Hetzner Online GmbH,64
+829,FR,lighthouse,OVH SAS,64
+830,US,teku,"DigitalOcean, LLC",64
+831,DE,lighthouse,Amazon,64
+832,CA,lighthouse,OVH SAS,64
+833,IE,prysm,Amazon,64
+834,US,lighthouse,Amazon,64
+835,FR,lighthouse,Amazon,64
+836,US,lighthouse,Amazon,64
+837,US,lighthouse,Amazon,64
+838,US,lighthouse,"DigitalOcean, LLC",64
+839,US,prysm,Amazon,64
+840,JP,lighthouse,UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED,64
+841,US,lighthouse,Amazon,64
+842,US,prysm,Amazon,64
+843,US,lighthouse,Amazon,64
+844,US,lighthouse,Amazon,64
+845,US,lighthouse,Amazon,64
+846,NO,lighthouse,Get AS,64
+847,DE,lighthouse,Hetzner Online GmbH,64
+848,FR,lighthouse,"Akamai Technologies, Inc.",64
+849,DE,lighthouse,gridscale GmbH,64
+850,GB,teku,Amazon,64
+851,SG,prysm,Amazon,63
+852,US,prysm,Amazon,63
+853,FI,teku,Hetzner Online GmbH,63
+854,US,prysm,Oracle Corporation,63
+855,GB,prysm,"DigitalOcean, LLC",63
+856,HK,prysm,Google LLC,63
+857,DE,prysm,Google LLC,63
+858,US,prysm,Amazon,63
+859,US,prysm,Oracle Corporation,63
+860,CN,prysm,Shenzhen Tencent Computer Systems Company Limited,63
+861,DE,prysm,netcup GmbH,63
+862,GB,prysm,Linode,63
+863,CN,prysm,Shenzhen Tencent Computer Systems Company Limited,62
+864,US,prysm,Amazon,62
+865,DE,prysm,"Akamai Technologies, Inc.",62
+866,US,prysm,Frontier,62
+867,US,prysm,Amazon,62
+868,CN,prysm,Shenzhen Tencent Computer Systems Company Limited,62
+869,US,prysm,Amazon,62
+870,SG,prysm,Amazon,62
+871,DE,prysm,"Akamai Technologies, Inc.",62
+872,CH,prysm,CloudSigma,61
+873,CH,prysm,CloudSigma,61
+874,US,prysm,AT&T,61
+875,AU,prysm,Aussie Broadband,61
+876,CN,prysm,Shenzhen Tencent Computer Systems Company Limited,61
+877,CH,prysm,CloudSigma,61
+878,CH,prysm,CloudSigma,61
+879,US,prysm,AT&T,61
+880,PR,lighthouse,Nustream Communications,60
+881,US,prysm,Amazon,60
+882,HK,prysm,Google LLC,60
+883,CH,prysm,CloudSigma,60
+884,NL,teku,WorldStream B.V.,60
+885,BG,prysm,Belcloud LTD,60
+886,SG,prysm,Amazon,60
+887,CH,prysm,CloudSigma,60
+888,CN,prysm,Shenzhen Tencent Computer Systems Company Limited,60
+889,GB,prysm,Virgin Media Limited,59
+890,CH,prysm,CloudSigma,59
+891,CH,prysm,CloudSigma,59
+892,CH,prysm,CloudSigma,59
+893,US,teku,The Constant Company,59
+894,CH,prysm,CloudSigma,59
+895,CH,prysm,CloudSigma,59
+896,CH,prysm,CloudSigma,59
+897,SG,prysm,Amazon,59
+898,CH,prysm,CloudSigma,59
+899,CH,prysm,CloudSigma,59
+900,CH,prysm,CloudSigma,58
+901,CH,prysm,CloudSigma,58
+902,CN,prysm,Shenzhen Tencent Computer Systems Company Limited,58
+903,CH,prysm,CloudSigma,58
+904,CH,prysm,CloudSigma,58
+905,CH,prysm,CloudSigma,58
+906,US,prysm,Amazon,58
+907,CH,prysm,CloudSigma,58
+908,CH,prysm,CloudSigma,58
+909,US,prysm,"Namecheap, Inc.",57
+910,US,prysm,Comcast,57
+911,CH,prysm,CloudSigma,57
+912,US,prysm,Comcast,57
+913,CH,prysm,CloudSigma,57
+914,CH,prysm,CloudSigma,56
+915,US,prysm,Comcast,56
+916,US,prysm,OVH US LLC,56
+917,CH,prysm,CloudSigma,56
+918,CH,prysm,CloudSigma,56
+919,KR,prysm,Korea Telecom,56
+920,CH,prysm,CloudSigma,55
+921,US,prysm,AT&T,55
+922,GB,prysm,Virgin Media Limited,55
+923,CH,prysm,CloudSigma,54
+924,US,prysm,Amazon,54
+925,DE,prysm,Hetzner Online GmbH,54
+926,GB,prysm,Virgin Media Limited,53
+927,GB,prysm,Virgin Media Limited,53
+928,CH,prysm,CloudSigma,53
+929,KR,prysm,SK Broadband Co Ltd,52
+930,RO,prysm,M247 Europe SRL,52
+931,KR,prysm,SK Broadband Co Ltd,52
+932,FI,lighthouse,Hetzner Online GmbH,52
+933,DE,prysm,Hetzner Online GmbH,52
+934,NL,prysm,Microsoft Corporation,52
+935,CA,prysm,Rogers Communications Canada Inc.,51
+936,DE,prysm,Hetzner Online GmbH,51
+937,JP,prysm,Amazon,51
+938,KR,prysm,Korea Telecom,51
+939,HK,prysm,Huawei International Pte. Ltd.,51
+940,NL,prysm,Microsoft Corporation,51
+941,NL,prysm,KPN B.V,51
+942,US,prysm,"DigitalOcean, LLC",50
+943,NL,prysm,Microsoft Corporation,50
+944,NL,prysm,Microsoft Corporation,50
+945,PT,prysm,PT Comunicacoes S.A.,50
+946,US,lighthouse,Wholesail networks LLC,50
+947,DE,prysm,Hetzner Online GmbH,50
+948,US,lighthouse,Comcast,50
+949,NL,prysm,Microsoft Corporation,50
+950,US,prysm,CenturyLink,50
+951,DE,prysm,Microsoft Corporation,49
+952,US,prysm,OVH US LLC,49
+953,US,prysm,Oracle Corporation,49
+954,JP,lighthouse,Sony Network Communications Inc,48
+955,AU,prysm,TPG,47
+956,US,prysm,Northland Communications Inc.,47
+957,AT,prysm,Magenta Telekom,46
+958,US,prysm,Charter,46
+959,US,prysm,Comcast,46
+960,DE,prysm,Hetzner Online GmbH,46
+961,US,prysm,Comcast,46
+962,AT,prysm,Magenta Telekom,45
+963,DE,prysm,Hetzner Online GmbH,45
+964,US,prysm,Charter,44
+965,US,prysm,Cogent,44
+966,CH,prysm,CloudSigma,44
+967,GB,prysm,OVH SAS,44
+968,US,prysm,CenturyLink,44
+969,CA,lighthouse,Bell,43
+970,MY,prysm,ADSL Streamyx Telekom Malaysia,43
+971,PL,nimbus,University of Warsaw Network,43
+972,PL,nimbus,University of Warsaw Network,42
+973,PL,nimbus,University of Warsaw Network,41
+974,US,lighthouse,AT&T,41
+975,KR,prysm,SK Broadband Co Ltd,40
+976,US,lighthouse,Verizon,40
+977,US,prysm,Google Fiber,40
+978,US,prysm,CenturyLink,39
+979,CA,nimbus,OVH SAS,39
+980,US,prysm,Verizon,39
+981,PL,nimbus,University of Warsaw Network,38
+982,US,prysm,Tachus Infrastructure LLC,38
+983,NL,prysm,Alwyzon,38
+984,CH,prysm,Swisscom (Schweiz) AG - Bluewin,38
+985,IE,nimbus,Amazon,38
+986,US,teku,Google Fiber,38
+987,DE,prysm,Contabo GmbH,38
+988,DK,prysm,Bolignet A/S,38
+989,US,prysm,Charter,37
+990,RU,nimbus,JSC Mediasoft ekspert,37
+991,NL,prysm,KPN B.V.,37
+992,DE,prysm,Contabo GmbH,36
+993,AT,prysm,Kabelsignal AG,36
+994,DE,prysm,OVH SAS,35
+995,CA,prysm,Shaw Communications Inc.,35
+996,AU,prysm,Exetel Pty Ltd,35
+997,SG,prysm,MYREPUBLIC,35
+998,NO,prysm,Get AS,34
+999,US,prysm,"Etheric Networks, Inc.",34
+1000,SG,prysm,Starhub Internet Pte Ltd,34
+1001,US,lighthouse,Cox,34
+1002,GB,prysm,BT,33
+1003,US,prysm,WideOpenWest Finance LLC,32
+1004,FI,prysm,Hetzner Online GmbH,32
+1005,US,prysm,Comcast,32
+1006,US,lighthouse,Comcast,31
+1007,AU,nimbus,OVH Australia PTY LTD,31
+1008,NL,prysm,KPN B.V.,31
+1009,DE,lighthouse,OVH SAS,31
+1010,FI,prysm,Hetzner Online GmbH,31
+1011,US,prysm,Comcast,30
+1012,US,prysm,Hotwire Communications,30
+1013,DE,prysm,Strato AG,30
+1014,DE,prysm,KMS,30
+1015,CA,prysm,Bell,30
+1016,DE,prysm,Contabo GmbH,29
+1017,US,prysm,Hotwire Communications,29
+1018,AT,lighthouse,Liberty Global Operations B.V,29
+1019,PL,prysm,Atman Sp. z o.o.,29
+1020,FR,prysm,Orange,29
+1021,US,prysm,AT&T,29
+1022,GB,prysm,Sky UK Limited,28
+1023,CA,prysm,Bell,28
+1024,SE,prysm,Telia Company AB,28
+1025,GR,prysm,Otenet S.A,28
+1026,US,lighthouse,Suddenlink Communications,28
+1027,US,prysm,"DigitalOcean, LLC",28
+1028,US,prysm,Comcast,28
+1029,DE,prysm,netcup GmbH,27
+1030,NO,prysm,Altibox,27
+1031,US,prysm,Frontier,27
+1032,DE,prysm,Contabo GmbH,27
+1033,ES,lighthouse,Telefonica,27
+1034,US,prysm,AT&T,26
+1035,US,prysm,M247 Europe Infra,26
+1036,DE,prysm,Strato AG,26
+1037,US,prysm,AT&T,26
+1038,US,prysm,Google LLC,26
+1039,FI,prysm,Hetzner Online GmbH,26
+1040,CA,prysm,TELUS Communications Inc,26
+1041,NZ,prysm,Two Degrees Mobile Limited,26
+1042,DE,prysm,Hetzner Online GmbH,26
+1043,US,prysm,Amazon,26
+1044,RU,prysm,NCNET,25
+1045,US,prysm,Verizon,25
+1046,CN,prysm,ChinaNet,25
+1047,US,prysm,Charter,25
+1048,US,prysm,Verizon,25
+1049,NZ,prysm,Two Degrees Mobile Limited,25
+1050,AU,lighthouse,TPG,25
+1051,US,prysm,Comcast,25
+1052,US,prysm,Comcast,25
+1053,DE,prysm,Strato AG,25
+1054,US,lighthouse,OVH SAS,25
+1055,CA,lighthouse,Bell,25
+1056,US,lighthouse,Comcast,24
+1057,CA,prysm,TELUS Communications Inc,24
+1058,US,prysm,OVH SAS,24
+1059,FR,nimbus,OVH SAS,24
+1060,FR,nimbus,OVH SAS,24
+1061,KR,prysm,SK Broadband Co Ltd,24
+1062,FI,prysm,Hetzner Online GmbH,24
+1063,RU,prysm,"OOO ""Network of data-centers ""Selectel""",24
+1064,CH,prysm,WWZ Telekom AG,24
+1065,FR,lighthouse,Proxad / Free SAS,24
+1066,RU,prysm,NCNET,24
+1067,FI,prysm,Hetzner Online GmbH,24
+1068,DE,prysm,netcup GmbH,23
+1069,RU,prysm,Alpha Net Telecom Ltd,23
+1070,CZ,prysm,T-Mobile Czech Republic,23
+1071,IT,prysm,Telecom Italia S.p.A. TIN EASY LITE,23
+1072,KR,prysm,SK Broadband Co Ltd,23
+1073,FR,prysm,OVH SAS,23
+1074,US,prysm,Charter,23
+1075,FR,prysm,France Telecom,23
+1076,IT,prysm,Telecom Italia S.p.A,23
+1077,US,lighthouse,AT&T,23
+1078,US,prysm,Amazon,23
+1079,CA,prysm,OVH SAS,23
+1080,DE,prysm,Vodafone,23
+1081,US,prysm,AT&T,22
+1082,CA,prysm,Shaw Communications Inc.,22
+1083,GB,prysm,"DigitalOcean, LLC",22
+1084,NZ,prysm,Two Degrees Mobile Limited,22
+1085,DE,nimbus,Amazon,22
+1086,US,prysm,Amazon,22
+1087,DE,teku,Contabo GmbH,22
+1088,DE,nimbus,Contabo GmbH,22
+1089,US,prysm,AT&T,22
+1090,US,lighthouse,Breezeline,22
+1091,RU,prysm,NCNET,22
+1092,FI,prysm,Hetzner Online GmbH,22
+1093,NL,lighthouse,T-Mobile Thuis WBA Services,22
+1094,FR,prysm,Orange,21
+1095,CH,prysm,green.ch ag,21
+1096,US,prysm,Amazon,21
+1097,RU,prysm,MIRALOGIC,21
+1098,US,prysm,AT&T,21
+1099,HK,prysm,Hong Kong Telecommunications (HKT) Limited Mass Internet,21
+1100,DE,lighthouse,Hetzner Online GmbH,21
+1101,US,prysm,Comcast,21
+1102,US,prysm,Oracle Corporation,21
+1103,CA,prysm,OVH SAS,20
+1104,CH,lighthouse,green.ch ag,20
+1105,US,prysm,AT&T,20
+1106,US,prysm,Google LLC,20
+1107,CA,prysm,Bell,20
+1108,PL,lighthouse,Orange Polska,20
+1109,RU,prysm,NCNET,20
+1110,AE,lighthouse,Emirates Telecommunications,20
+1111,US,prysm,Google LLC,20
+1112,DE,prysm,netcup GmbH,20
+1113,AU,prysm,Telstra Internet,20
+1114,FR,prysm,OVH SAS,20
+1115,RU,prysm,"Ltd ""Alfa Net Telecom""",20
+1116,AD,prysm,Andorra Telecom SAU,20
+1117,GB,lighthouse,Andrews & Arnold Ltd,20
+1118,RU,prysm,Information and Communication Technologies LLC,20
+1119,DE,lighthouse,Contabo GmbH,20
+1120,GB,prysm,PlusNet plc.,19
+1121,KR,prysm,SK Broadband Co Ltd,19
+1122,CA,nimbus,Nexicom Inc.,19
+1123,FI,lighthouse,Hetzner Online GmbH,19
+1124,US,prysm,Mid Century Communications,19
+1125,RU,prysm,LanCraft Ltd.,19
+1126,TW,lighthouse,Chunghwa Telecom,19
+1127,US,lighthouse,Verizon,18
+1128,DE,prysm,Contabo GmbH,18
+1129,KR,prysm,SK Broadband Co Ltd,18
+1130,SG,prysm,MYREPUBLIC,18
+1131,CA,prysm,Bell,18
+1132,US,prysm,Google LLC,18
+1133,US,prysm,Comcast,18
+1134,JP,prysm,Sony Network Communications Inc,18
+1135,DE,prysm,Hetzner Online GmbH,18
+1136,NL,prysm,WorldStream B.V.,18
+1137,US,prysm,Amazon,18
+1138,BG,prysm,Spectrum,18
+1139,FI,teku,Hetzner Online GmbH,18
+1140,DE,nimbus,netcup GmbH,18
+1141,CN,lighthouse,ChinaNet,18
+1142,RU,prysm,LanCraft Ltd.,18
+1143,AT,prysm,UPC Technology,18
+1144,ZA,prysm,Xneelo (Pty) Ltd,17
+1145,US,prysm,OVH SAS,17
+1146,FI,prysm,Telia Finland Oyj,17
+1147,KR,prysm,Korea Telecom,17
+1148,MT,prysm,Epic Communications Limited,17
+1149,RU,prysm,IPLS,17
+1150,RU,prysm,LanCraft Ltd.,17
+1151,US,prysm,Comcast,17
+1152,ZA,prysm,Xneelo (Pty) Ltd,17
+1153,DE,prysm,Hetzner Online GmbH,17
+1154,DE,prysm,"DigitalOcean, LLC",17
+1155,FR,prysm,OVH SAS,17
+1156,KR,prysm,SK Broadband Co Ltd,17
+1157,HK,prysm,Hong Kong Broadband Network Ltd,17
+1158,RU,lighthouse,TeleSeti Core Network,17
+1159,GB,prysm,Sky UK Limited,17
+1160,FI,prysm,Telia Finland Oyj,17
+1161,DE,lighthouse,Vodafone,16
+1162,US,lighthouse,Google Fiber,16
+1163,AU,prysm,TPG,16
+1164,US,prysm,Verizon,16
+1165,KR,prysm,SK Broadband Co Ltd,16
+1166,CN,prysm,ChinaNet,16
+1167,US,prysm,Comcast,16
+1168,FR,prysm,OVH SAS,16
+1169,US,prysm,Comcast,16
+1170,DE,prysm,"DigitalOcean, LLC",16
+1171,US,prysm,OVH SAS,16
+1172,AT,prysm,netcup GmbH,16
+1173,AU,lighthouse,Aussie Broadband,16
+1174,US,teku,Shenandoah Cable Television LLC,16
+1175,FI,prysm,Telia Finland Oyj,16
+1176,FR,prysm,OVH SAS,16
+1177,KR,prysm,Korea Telecom,16
+1178,AU,prysm,Telstra Corporation Limited,16
+1179,US,lighthouse,AT&T,16
+1180,US,lighthouse,AT&T,16
+1181,US,teku,CenturyLink,16
+1182,PL,prysm,Wadowicenet SP Z O O,16
+1183,CN,prysm,ChinaNet,15
+1184,US,prysm,CenturyLink,15
+1185,US,prysm,OVH SAS,15
+1186,DE,prysm,"DigitalOcean, LLC",15
+1187,DE,prysm,Contabo GmbH,15
+1188,US,lighthouse,Wholesail networks LLC,15
+1189,US,nimbus,Communications Design Acquisition Corporation,15
+1190,US,prysm,Amazon,15
+1191,RU,lighthouse,CORBINA-BROADBAND,15
+1192,CN,prysm,ShenZhen Topway Video Communication Co. Ltd.,15
+1193,US,prysm,Amazon,15
+1194,FI,prysm,Hetzner Online GmbH,15
+1195,IL,lighthouse,PROVIDER Local Registry,15
+1196,DE,prysm,Vodafone,15
+1197,US,prysm,Comcast,15
+1198,US,prysm,Comcast,15
+1199,PL,prysm,Wadowicenet SP Z O O,15
+1200,DE,lighthouse,netcup GmbH,15
+1201,US,prysm,Suddenlink Communications,15
+1202,SI,prysm,"A1 Slovenija telekomunikacijske storitve, d.d.",15
+1203,GB,lighthouse,Sky UK Limited,15
+1204,NZ,lighthouse,Two Degrees Mobile Limited,15
+1205,US,lighthouse,Wholesail networks LLC,15
+1206,CN,prysm,ShenZhen Topway Video Communication Co. Ltd.,15
+1207,US,lighthouse,Comcast,15
+1208,FI,prysm,Hetzner Online GmbH,15
+1209,SG,prysm,OVH SAS,14
+1210,IT,prysm,Telecom Italia S.p.A. TIN EASY LITE,14
+1211,US,nimbus,Comcast,14
+1212,AT,lighthouse,A1 Telekom Austria,14
+1213,GB,prysm,BT,14
+1214,US,nimbus,"Consolidated Communications, Inc.",14
+1215,PL,prysm,Wadowicenet SP Z O O,14
+1216,FI,prysm,Hetzner Online GmbH,14
+1217,US,prysm,Google Fiber,14
+1218,AU,lighthouse,SingTel Optus Pty Ltd,14
+1219,US,prysm,OVH SAS,14
+1220,US,prysm,"Gigsouth, LLC",14
+1221,GB,lighthouse,Gigaclear Limited,14
+1222,PL,prysm,Wadowicenet SP Z O O,13
+1223,PL,prysm,Wadowicenet SP Z O O,13
+1224,US,prysm,Cox,13
+1225,US,prysm,"Gigsouth, LLC",13
+1226,RU,prysm,comcor.ru,13
+1227,GB,lighthouse,Virgin Media Limited,13
+1228,AU,prysm,TPG,13
+1229,DE,lighthouse,Strato AG,13
+1230,RS,prysm,MadNet ISP,13
+1231,AU,prysm,Telstra Corporation Limited,13
+1232,KR,prysm,SK Broadband Co Ltd,13
+1233,PL,prysm,Wadowicenet SP Z O O,13
+1234,US,prysm,Riseup Networks,13
+1235,GB,prysm,BT,13
+1236,AU,prysm,SingTel Optus Pty Ltd,12
+1237,AU,prysm,SingTel Optus Pty Ltd,12
+1238,US,prysm,Amazon,12
+1239,US,lighthouse,Comcast,12
+1240,SG,prysm,Starhub Internet Pte Ltd,12
+1241,DE,lighthouse,Deutsche Telekom,12
+1242,FI,prysm,Hetzner Online GmbH,12
+1243,AU,prysm,SingTel Optus Pty Ltd,12
+1244,FR,lighthouse,Amazon,12
+1245,TW,prysm,Chunghwa Telecom,12
+1246,SG,teku,OVH Singapore PTE. LTD,12
+1247,MY,prysm,TT DOTCOM SDN BHD,12
+1248,DE,prysm,"DigitalOcean, LLC",12
+1249,TH,lighthouse,TOT,12
+1250,TW,prysm,Chunghwa Telecom,12
+1251,DE,prysm,"DigitalOcean, LLC",12
+1252,US,prysm,Frontier,12
+1253,US,prysm,"Greenlight Networks, LLC",12
+1254,DE,prysm,"DigitalOcean, LLC",12
+1255,TW,prysm,Chunghwa Telecom,12
+1256,US,prysm,RCN,11
+1257,FR,prysm,OVH SAS,11
+1258,SE,nimbus,Telia Company AB,11
+1259,PT,lighthouse,NOS COMUNICACOES S.A,11
+1260,TW,prysm,Chunghwa Telecom,11
+1261,DE,prysm,"DigitalOcean, LLC",11
+1262,DE,prysm,Deutsche Telekom,11
+1263,DE,prysm,PURtel,11
+1264,US,prysm,Verizon,11
+1265,US,prysm,Verizon,11
+1266,TW,prysm,Chunghwa Telecom,11
+1267,DE,prysm,netcup GmbH,11
+1268,CA,prysm,Rogers Communications Canada Inc.,11
+1269,US,prysm,AT&T,11
+1270,CN,prysm,China Telecom,11
+1271,CA,prysm,Le Groupe Videotron Ltee,11
+1272,CA,lighthouse,Bell,11
+1273,DE,prysm,Deutsche Telekom,11
+1274,US,prysm,AT&T,11
+1275,DE,unknown,Deutsche Telekom,10
+1276,NL,teku,ColocationX Ltd.,10
+1277,TW,prysm,Chunghwa Telecom,10
+1278,US,prysm,Comcast,10
+1279,US,prysm,"Direct Communications Cedar Valley, LLC",10
+1280,US,prysm,AT&T,10
+1281,US,lighthouse,Charter,10
+1282,FI,prysm,Hetzner Online GmbH,10
+1283,US,lighthouse,Frontier,10
+1284,CA,prysm,OVH SAS,10
+1285,DE,prysm,Deutsche Telekom,10
+1286,US,prysm,Verizon,10
+1287,US,prysm,Charter,10
+1288,CZ,prysm,Neutral Free eXchange members - FreeTel alternate,10
+1289,US,prysm,Comcast,10
+1290,DK,prysm,TDC Holding A/S,10
+1291,DE,prysm,"DigitalOcean, LLC",10
+1292,US,prysm,Amazon,10
+1293,US,prysm,Comcast,10
+1294,US,prysm,Nuvera,10
+1295,CA,prysm,Bell,10
+1296,TH,prysm,True Internet,10
+1297,DE,prysm,Hetzner Online GmbH,10
+1298,US,prysm,Charter,10
+1299,US,prysm,Cablevision Systems Corp.,10
+1300,NZ,prysm,Two Degrees Mobile Limited,10
+1301,US,prysm,"Direct Communications Cedar Valley, LLC",10
+1302,DE,prysm,"DigitalOcean, LLC",10
+1303,US,lighthouse,Evocative,10
+1304,HK,prysm,PCCW IMS Limited,10
+1305,CH,prysm,WWZ Telekom AG,10
+1306,FR,lighthouse,OVH SAS,10
+1307,CA,prysm,OVH SAS,10
+1308,IT,lighthouse,Tiscali Italia SpA,10
+1309,US,prysm,OVH SAS,10
+1310,CH,prysm,WWZ Telekom AG,10
+1311,CH,prysm,WWZ Telekom AG,10
+1312,DE,nimbus,Deutsche Telekom,10
+1313,SG,prysm,Amazon,9
+1314,KR,prysm,KINX,9
+1315,US,prysm,Comcast,9
+1316,DE,prysm,Hetzner Online GmbH,9
+1317,RU,prysm,"""Sistemy Papilon"" Ltd.",9
+1318,CN,prysm,ChinaNet,9
+1319,US,lighthouse,Charter,9
+1320,SG,prysm,SINGTEL MOBILE Singapore,9
+1321,FI,prysm,Hetzner Online GmbH,9
+1322,CH,nimbus,green.ch ag,9
+1323,US,prysm,Comcast,9
+1324,US,lighthouse,"DigitalOcean, LLC",9
+1325,TW,prysm,Chunghwa Telecom,9
+1326,CN,prysm,ChinaNet,9
+1327,US,prysm,Comcast,9
+1328,CA,prysm,Bell,9
+1329,DE,prysm,OVH SAS,9
+1330,US,prysm,"Interserver, Inc",9
+1331,US,prysm,Frontier,9
+1332,US,nimbus,Quintex Alliance Consulting,9
+1333,CA,prysm,TELUS Communications Inc.,9
+1334,US,prysm,Verizon,9
+1335,DE,prysm,"DigitalOcean, LLC",9
+1336,US,prysm,TDS TELECOM,9
+1337,US,prysm,Comcast,9
+1338,TW,prysm,Chunghwa Telecom,9
+1339,US,prysm,AT&T,9
+1340,CH,lighthouse,Genossenschaft GGA Maur,9
+1341,US,prysm,Verizon,9
+1342,BE,lighthouse,EDPNET Belgium BV,9
+1343,FI,prysm,Hetzner Online GmbH,9
+1344,US,prysm,Nuvera,9
+1345,US,prysm,Comcast,9
+1346,GB,prysm,Vodafone,9
+1347,US,nimbus,"Another Corporate ISP, LLC",9
+1348,US,nimbus,Comcast,9
+1349,BR,nimbus,Vivo,9
+1350,NL,prysm,KPN B.V.,9
+1351,GB,lighthouse,"DigitalOcean, LLC",9
+1352,DE,prysm,Tele Columbus AG,9
+1353,AU,prysm,Telstra Corporation Limited,9
+1354,TW,prysm,Chunghwa Telecom,9
+1355,KR,prysm,Korea Telecom,8
+1356,TR,prysm,Alastyr Telekomunikasyon A.S.,8
+1357,US,prysm,Verizon,8
+1358,IN,prysm,Amazon,8
+1359,US,prysm,Comcast,8
+1360,CN,prysm,ChinaNet,8
+1361,US,prysm,Verizon,8
+1362,US,prysm,Comcast,8
+1363,US,lighthouse,Comcast,8
+1364,US,prysm,QuadraNet Enterprises LLC,8
+1365,US,lighthouse,Comcast,8
+1366,RU,lighthouse,"CJSC ""ER-Telecom Holding"" Rostov-na-Donu branch",8
+1367,US,prysm,Comcast,8
+1368,DE,prysm,Hetzner Online GmbH,8
+1369,US,prysm,Verizon,8
+1370,US,prysm,AT&T,8
+1371,US,lighthouse,OVH SAS,8
+1372,FI,prysm,Hetzner Online GmbH,8
+1373,US,prysm,Comcast,8
+1374,US,prysm,Verizon,8
+1375,ES,prysm,Xtra Telecom S.A,8
+1376,US,prysm,Comcast,8
+1377,US,prysm,Verizon,8
+1378,US,prysm,Comcast,8
+1379,FR,prysm,Proxad / Free SAS,8
+1380,FR,prysm,OVH SAS,8
+1381,US,prysm,Comcast,8
+1382,US,prysm,Comcast,8
+1383,KR,prysm,SK Broadband Co Ltd,8
+1384,US,prysm,Verizon,8
+1385,US,prysm,Charter,8
+1386,DE,prysm,Hetzner Online GmbH,8
+1387,FI,prysm,Hetzner Online GmbH,8
+1388,CN,prysm,ChinaNet,8
+1389,US,prysm,Microsoft Corporation,8
+1390,US,prysm,Verizon,8
+1391,US,prysm,RCN,8
+1392,DE,nimbus,Contabo GmbH,8
+1393,US,prysm,RCN,8
+1394,US,prysm,Comcast,8
+1395,US,prysm,RCN,8
+1396,KR,prysm,Korea Telecom,8
+1397,US,prysm,Verizon,8
+1398,TW,prysm,Chunghwa Telecom,8
+1399,US,nimbus,Charter,8
+1400,US,prysm,Verizon,8
+1401,US,teku,Comcast,8
+1402,US,lighthouse,Comcast,8
+1403,CH,prysm,green.ch AG,8
+1404,FI,lighthouse,Hetzner Online GmbH,8
+1405,US,prysm,Spectrum,8
+1406,CA,prysm,Bell,8
+1407,US,prysm,Comcast,8
+1408,ES,prysm,Xtra Telecom S.A,8
+1409,DE,prysm,Contabo GmbH,8
+1410,US,lighthouse,Comcast,8
+1411,US,prysm,Comcast,7
+1412,CH,prysm,Init7 (Switzerland) Ltd.,7
+1413,US,prysm,Comcast,7
+1414,ES,prysm,Vodafone,7
+1415,GB,prysm,Virgin Media Limited,7
+1416,NL,prysm,ZIGGO,7
+1417,US,lighthouse,Charter,7
+1418,US,prysm,RCN,7
+1419,US,prysm,Comcast,7
+1420,US,prysm,Comcast,7
+1421,CA,prysm,Bell,7
+1422,TW,prysm,Chunghwa Telecom,7
+1423,FR,prysm,OVH SAS,7
+1424,CA,lighthouse,Rogers Communications Canada Inc.,7
+1425,US,prysm,Comcast,7
+1426,US,prysm,RCN,7
+1427,US,prysm,RCN,7
+1428,US,prysm,Charter,7
+1429,AU,prysm,Aussie Broadband,7
+1430,US,prysm,Verizon,7
+1431,PL,lighthouse,Host4Biz sp. z o.o.,7
+1432,TW,prysm,Chunghwa Telecom,7
+1433,US,prysm,Comcast,7
+1434,FI,prysm,Hetzner Online GmbH,7
+1435,DE,prysm,netcup GmbH,7
+1436,TW,prysm,Chunghwa Telecom,7
+1437,US,prysm,Comcast,7
+1438,US,prysm,Verizon,7
+1439,US,prysm,Amazon,7
+1440,GR,prysm,UPATRAS,7
+1441,ES,prysm,Ono,7
+1442,DE,nimbus,netcup GmbH,7
+1443,US,prysm,Verizon,7
+1444,US,lighthouse,Comcast,7
+1445,US,prysm,Frontier,7
+1446,AT,prysm,SALZBURG-AG,7
+1447,GB,prysm,IDNET tertiary address,7
+1448,AT,lighthouse,UPC AT,7
+1449,ES,prysm,Ono,7
+1450,US,prysm,Wholesail networks LLC,7
+1451,GB,prysm,IDNET tertiary address,7
+1452,US,prysm,AT&T,7
+1453,DE,prysm,Hetzner Online GmbH,7
+1454,US,prysm,Comcast,7
+1455,US,prysm,Comcast,7
+1456,ES,prysm,Comunitel Global,7
+1457,TW,prysm,Chunghwa Telecom,7
+1458,US,prysm,Verizon,7
+1459,US,prysm,Charter,7
+1460,US,prysm,Verizon,7
+1461,US,prysm,Verizon,7
+1462,ES,nimbus,Telefonica,7
+1463,ES,prysm,Vodafone,6
+1464,US,nimbus,Google Fiber,6
+1465,TW,lighthouse,Chunghwa Telecom,6
+1466,US,prysm,Frontier,6
+1467,CH,prysm,Swisscom (Schweiz) AG - Bluewin,6
+1468,NL,lighthouse,Vodafone,6
+1469,IL,prysm,BEZEQINT,6
+1470,US,prysm,Tier.Net Technologies LLC,6
+1471,NL,prysm,KPN B.V.,6
+1472,CA,prysm,OVH SAS,6
+1473,US,prysm,Frontier,6
+1474,IL,nimbus,Partner Communications Ltd.,6
+1475,US,lighthouse,Comcast,6
+1476,DE,teku,Contabo GmbH,6
+1477,DE,prysm,Contabo GmbH,6
+1478,DE,nimbus,EWE TEL,6
+1479,US,prysm,Verizon,6
+1480,HU,prysm,TARR Ltd.,6
+1481,DE,prysm,Deutsche Telekom,6
+1482,RU,prysm,Fortex Cjsc,6
+1483,US,lighthouse,Charter,6
+1484,DE,prysm,Hetzner Online GmbH,6
+1485,DE,prysm,Deutsche Telekom,6
+1486,AT,prysm,ANX,6
+1487,DE,prysm,Deutsche Telekom,6
+1488,FI,prysm,Hetzner Online GmbH,6
+1489,US,prysm,TeraSwitch,6
+1490,FR,prysm,Orange,6
+1491,RU,prysm,Uniontel ZAO network,6
+1492,AT,lighthouse,oja.at GmbH,6
+1493,AD,prysm,Andorra Telecom SAU,6
+1494,US,lighthouse,Amazon,6
+1495,DE,nimbus,netcup GmbH,6
+1496,FR,prysm,Orange,6
+1497,US,prysm,Charter,6
+1498,US,prysm,Verizon,6
+1499,US,prysm,"Nubes, LLC",6
+1500,DE,prysm,Deutsche Telekom,6
+1501,RU,prysm,Uniontel ZAO network,6
+1502,US,prysm,Verizon,6
+1503,CA,prysm,Bell,6
+1504,US,teku,Longmont Power & Communications,6
+1505,RU,prysm,ORTEL,6
+1506,US,prysm,Verizon,6
+1507,CH,prysm,Sunrise GmbH,6
+1508,US,lighthouse,Verizon,6
+1509,US,nimbus,Tachus Infrastructure LLC,6
+1510,US,prysm,Verizon,6
+1511,CH,prysm,Swisscom (Schweiz) AG - Bluewin,6
+1512,HK,prysm,PCCW IMS Limited,5
+1513,US,prysm,TDS TELECOM,5
+1514,US,prysm,"Nubes, LLC",5
+1515,US,prysm,Verizon,5
+1516,KR,prysm,Amazon,5
+1517,US,prysm,Verizon,5
+1518,US,nimbus,CenturyLink,5
+1519,CN,prysm,ChinaNet,5
+1520,KR,prysm,SK Broadband Co Ltd,5
+1521,DE,prysm,Hetzner Online GmbH,5
+1522,AD,prysm,Andorra Telecom SAU,5
+1523,US,prysm,Cable ONE,5
+1524,RS,prysm,TELEKOM-SRBIJA,5
+1525,AR,lighthouse,Telecom Argentina S.A,5
+1526,LT,lighthouse,"Informacines sistemos ir technologijos, UAB",5
+1527,CZ,lighthouse,Vodafone,5
+1528,RU,prysm,CORBINA,5
+1529,US,prysm,Wave Broadband,5
+1530,DK,prysm,TDC Holding A/S,5
+1531,TH,prysm,"United Information Highway Co., Ltd.",5
+1532,RU,prysm,Fortex Cjsc,5
+1533,NL,prysm,Vodafone,5
+1534,US,prysm,Wholesail networks LLC,5
+1535,ES,prysm,IPCOM,5
+1536,ES,prysm,VODAFONE-NETWORK,5
+1537,DE,prysm,netcup GmbH,5
+1538,US,prysm,Verizon,5
+1539,CA,prysm,Rogers Communications Canada Inc.,5
+1540,AT,prysm,Liberty Global Operations B.V,5
+1541,US,lighthouse,US Internet Corp,5
+1542,US,prysm,Comcast,5
+1543,DE,prysm,Deutsche Telekom,5
+1544,DE,prysm,Deutsche Telekom,5
+1545,US,prysm,Charter,5
+1546,FR,prysm,OVH SAS,5
+1547,NL,prysm,IP Volume inc,5
+1548,SE,prysm,Bahnhof AB,5
+1549,US,prysm,Comcast,5
+1550,NL,teku,T-mobile Netherlands,5
+1551,US,prysm,Wave Broadband,5
+1552,DE,teku,OVH SAS,5
+1553,US,prysm,Verizon,5
+1554,GB,nimbus,Virgin Media Limited,5
+1555,RU,prysm,"JSC ""Ufanet""",5
+1556,US,prysm,Verizon,5
+1557,US,prysm,Charter,5
+1558,US,lighthouse,Frontier,5
+1559,US,prysm,Wholesail networks LLC,5
+1560,DK,nimbus,TDC Holding A/S,5
+1561,GB,nimbus,Virgin Media Limited,5
+1562,US,prysm,Alibaba.com LLC,5
+1563,US,prysm,Charter,5
+1564,RU,prysm,IZet-Telecom Ural,5
+1565,PT,teku,PT Comunicacoes,5
+1566,ES,prysm,Ono,5
+1567,US,teku,Amazon,5
+1568,US,prysm,G-Core Labs S.A.,5
+1569,TH,prysm,"United Information Highway Co., Ltd.",5
+1570,US,lighthouse,Amazon,5
+1571,PL,prysm,MEVSPACE sp. z o.o.,5
+1572,DE,prysm,Deutsche Telekom,5
+1573,US,prysm,CenturyLink,5
+1574,RU,prysm,CORBINA,5
+1575,US,prysm,Comcast,5
+1576,FI,prysm,Hetzner Online GmbH,5
+1577,GB,prysm,VeloxServ Communications Ltd,5
+1578,GB,lighthouse,Virgin Media,5
+1579,FR,teku,France Telecom,5
+1580,PL,prysm,OVH SAS,5
+1581,US,nimbus,Webpass Inc.,5
+1582,US,prysm,CenturyLink,5
+1583,FR,teku,France Telecom,5
+1584,DE,nimbus,netcup GmbH,5
+1585,IT,lighthouse,Wind TRE S.P.A.,5
+1586,US,prysm,"SBA Edge, LLC",5
+1587,US,prysm,CenturyLink,5
+1588,US,prysm,Comcast,5
+1589,PT,lighthouse,NOS COMUNICACOES S.A,5
+1590,RU,prysm,Uniontel ZAO network,5
+1591,DE,prysm,Deutsche Telekom,5
+1592,US,prysm,AT&T,5
+1593,AR,prysm,Telefonica,4
+1594,NL,prysm,Vodafone,4
+1595,US,prysm,Comcast,4
+1596,SG,lighthouse,OVH Hosting,4
+1597,FR,prysm,OVH SAS,4
+1598,DE,prysm,Deutsche Telekom,4
+1599,US,prysm,Comcast,4
+1600,NL,prysm,Netwerkvereniging Coloclue,4
+1601,US,prysm,Frontier,4
+1602,PT,nimbus,MEO - SERVICOS DE COMUNICACOES E MULTIMEDIA S.A,4
+1603,AU,lighthouse,SUPERLOOP (AUSTRALIA) PTY LTD,4
+1604,CA,prysm,TELUS Communications Inc.,4
+1605,RU,prysm,Joint Stock Company TransTeleCom,4
+1606,DK,nimbus,TDC Holding A/S,4
+1607,CH,prysm,Sunrise GmbH,4
+1608,CH,prysm,Swisscom (Schweiz) AG,4
+1609,US,prysm,Verizon,4
+1610,US,prysm,Amazon,4
+1611,US,prysm,"DigitalOcean, LLC",4
+1612,DE,nimbus,Deutsche Telekom,4
+1613,BY,prysm,Republican Unitary Telecommunication Enterprise Beltelecom,4
+1614,FI,prysm,Hetzner Online GmbH,4
+1615,SE,prysm,Tele2 Sverige AB,4
+1616,AD,lighthouse,Andorra Telecom SAU,4
+1617,BY,prysm,Republican Unitary Telecommunication Enterprise Beltelecom,4
+1618,SG,teku,Amazon,4
+1619,GB,prysm,Vodafone,4
+1620,US,nimbus,Another Corporate ISP,4
+1621,DE,nimbus,M-net,4
+1622,EE,prysm,Telia Eesti AS,4
+1623,US,teku,Amazon,4
+1624,GB,nimbus,BT,4
+1625,ES,lighthouse,Xtra Telecom S.A,4
+1626,US,lighthouse,Cox,4
+1627,JP,lighthouse,Contabo Asia Private Limited,4
+1628,GB,prysm,Virgin Media Limited,4
+1629,US,prysm,Comcast,4
+1630,DE,nimbus,Deutsche Telekom,4
+1631,SE,lighthouse,Telia Company AB,4
+1632,US,prysm,AT&T,4
+1633,NL,lighthouse,A2000 / Kabeltelevisie Amsterdam B.V.,4
+1634,US,prysm,Cox,4
+1635,US,prysm,Comcast,4
+1636,US,prysm,Frontier,4
+1637,US,lighthouse,Frontier,4
+1638,US,prysm,Comcast,4
+1639,SE,prysm,Bahnhof AB,4
+1640,DE,nimbus,Vodafone,4
+1641,CZ,prysm,Vodafone,4
+1642,US,prysm,Cox,4
+1643,DE,prysm,Hetzner Online GmbH,4
+1644,GB,prysm,Sky UK Limited,4
+1645,EE,prysm,Telia Eesti AS,4
+1646,US,prysm,Google Fiber,4
+1647,RO,prysm,UPC Romania,4
+1648,US,lighthouse,OVH SAS,4
+1649,US,prysm,AT&T,4
+1650,US,prysm,Charter,4
+1651,RU,prysm,provider LIR RU.INECO,4
+1652,US,prysm,Comcast,4
+1653,RU,prysm,MAXnet.ru Kaluga,4
+1654,DE,prysm,Vodafone,4
+1655,GR,teku,Tellas S.A,4
+1656,AU,lighthouse,Cogent,4
+1657,GB,lighthouse,BT,4
+1658,GB,lighthouse,Virgin Media,4
+1659,BG,nimbus,AltusHost B.V.,4
+1660,ES,prysm,Telefonica,4
+1661,US,prysm,Charter,4
+1662,CA,prysm,TELUS Communications Inc.,4
+1663,PL,prysm,MEVSPACE sp. z o.o.,4
+1664,US,nimbus,"Akamai Technologies, Inc.",4
+1665,RU,prysm,NCNET,4
+1666,ES,prysm,Vodafone,4
+1667,CH,prysm,Swisscom (Schweiz) AG,4
+1668,US,prysm,Spectrum,4
+1669,FR,prysm,France Telecom,4
+1670,DE,nimbus,M-net,4
+1671,AU,lighthouse,Cogent,4
+1672,US,prysm,TDS TELECOM,4
+1673,GB,lighthouse,TalkTalk,4
+1674,US,prysm,Spectrum,4
+1675,US,teku,Google LLC,4
+1676,US,prysm,CenturyLink,4
+1677,NL,prysm,Freedom Internet BV,4
+1678,FR,lighthouse,France Telecom,4
+1679,US,prysm,AT&T,4
+1680,CH,lighthouse,iWay AG,4
+1681,DE,prysm,1&1 Versatel,4
+1682,US,prysm,Cox,4
+1683,SG,prysm,Contabo Asia Private Limited,4
+1684,IL,lighthouse,"""Bezeq""- THE ISRAEL TELECOMMUNICATION CORP. LTD.",4
+1685,US,prysm,Comcast,4
+1686,US,lighthouse,OVH SAS,4
+1687,US,prysm,Cox,4
+1688,DE,teku,Amazon,4
+1689,NL,prysm,Vodafone,4
+1690,US,lighthouse,Webpass Inc.,4
+1691,DE,lighthouse,Deutsche Telekom,4
+1692,SG,lighthouse,Contabo Asia Private Limited,4
+1693,US,prysm,"WebNX, Inc.",3
+1694,US,prysm,Cox,3
+1695,NL,prysm,ZIGGO,3
+1696,US,prysm,Cablevision Systems Corp.,3
+1697,HU,lighthouse,DIGI Tavkozlesi es Szolgaltato Kft.,3
+1698,US,prysm,Comcast,3
+1699,AR,prysm,Telefonica,3
+1700,US,lighthouse,Comcast,3
+1701,DE,prysm,netcup GmbH,3
+1702,CH,lighthouse,Salt Mobile,3
+1703,FI,prysm,Hetzner Online GmbH,3
+1704,US,lighthouse,CenturyLink,3
+1705,DE,prysm,Strato AG,3
+1706,CA,nimbus,Rogers Communications Canada Inc.,3
+1707,US,prysm,"T-Mobile USA, Inc.",3
+1708,AU,prysm,OVH Australia PTY LTD,3
+1709,US,prysm,Charter,3
+1710,JP,lighthouse,Matsusaka Cable-TV Station Inc.,3
+1711,DE,nimbus,Deutsche Telekom,3
+1712,JP,prysm,Sony Network Communications Inc,3
+1713,TR,prysm,Contabo GmbH,3
+1714,KR,lighthouse,LG POWERCOMM,3
+1715,DE,prysm,Hetzner Online GmbH,3
+1716,US,prysm,Cablevision Systems Corp.,3
+1717,DE,lighthouse,Telefonica,3
+1718,CH,prysm,Swisscom (Schweiz) AG - Bluewin,3
+1719,US,prysm,Verizon,3
+1720,DE,lighthouse,KomMITT-Ratingen GmbH,3
+1721,US,prysm,Comcast,3
+1722,US,prysm,AT&T,3
+1723,US,prysm,Comcast,3
+1724,ES,lighthouse,Telefonica,3
+1725,ID,prysm,PT Pundi Mas Berjaya,3
+1726,DE,teku,Allnodes Inc,3
+1727,US,prysm,Wholesail networks LLC,3
+1728,TH,prysm,True Internet,3
+1729,CH,nimbus,Swisscom (Schweiz) AG - Bluewin,3
+1730,IT,prysm,Revolution Provider SRL,3
+1731,US,prysm,Charter,3
+1732,DK,prysm,TDC Holding A/S,3
+1733,US,lighthouse,Frontier,3
+1734,DE,teku,Contabo GmbH,3
+1735,CL,lighthouse,TELEFÓNICA CHILE S.A.,3
+1736,DE,prysm,netcup GmbH,3
+1737,US,prysm,Summit Broadband,3
+1738,SE,teku,Amazon,3
+1739,TR,prysm,Contabo GmbH,3
+1740,KR,prysm,Korea Telecom,3
+1741,SG,prysm,TeraSwitch,3
+1742,FI,prysm,Hetzner Online GmbH,3
+1743,US,prysm,Charter,3
+1744,US,prysm,The Optimal Link Corporation,3
+1745,DE,prysm,Strato AG,3
+1746,FR,prysm,BOUYGUES Telecom,3
+1747,BY,prysm,Republican Unitary Telecommunication Enterprise Beltelecom,3
+1748,US,prysm,Frontier,3
+1749,PT,prysm,Vodafone,3
+1750,US,teku,Verizon,3
+1751,DE,prysm,Hetzner Online GmbH,3
+1752,DE,prysm,Strato AG,3
+1753,KR,prysm,LG POWERCOMM,3
+1754,AU,prysm,TPG,3
+1755,DE,prysm,Strato AG,3
+1756,US,prysm,Comcast,3
+1757,AT,prysm,UPC Austria,3
+1758,DE,prysm,Vodafone,3
+1759,ES,prysm,Telefonica,3
+1760,DE,prysm,Strato AG,3
+1761,SE,prysm,Tele2 Sverige AB,3
+1762,DE,prysm,Strato AG,3
+1763,US,lighthouse,Verizon,3
+1764,US,teku,Verizon,3
+1765,DE,prysm,Strato AG,3
+1766,US,teku,AT&T,3
+1767,US,prysm,Comcast,3
+1768,CN,prysm,China Unicom,3
+1769,US,prysm,"Consolidated Communications, Inc.",3
+1770,DE,prysm,Strato AG,3
+1771,US,prysm,Cablevision Systems Corp.,3
+1772,DE,prysm,Strato AG,3
+1773,TR,prysm,Contabo GmbH,3
+1774,US,prysm,Charter,3
+1775,FI,prysm,Hetzner Online GmbH,3
+1776,DE,prysm,1&1 Versatel,3
+1777,KR,prysm,Korea Telecom,3
+1778,FI,lighthouse,Hetzner Online GmbH,3
+1779,US,prysm,Cox,3
+1780,LT,prysm,Telia Lietuva,3
+1781,DE,prysm,1&1 Versatel,3
+1782,CA,lighthouse,Bell,3
+1783,US,prysm,AT&T,3
+1784,CZ,prysm,Vodafone,3
+1785,US,lighthouse,Comcast,3
+1786,AU,prysm,TPG,3
+1787,FR,prysm,BOUYGUES Telecom,3
+1788,US,prysm,Comcast,3
+1789,US,prysm,Wholesail networks LLC,3
+1790,US,prysm,Summit Broadband,3
+1791,DE,prysm,Strato AG,3
+1792,TR,prysm,Contabo GmbH,3
+1793,NL,teku,"DigitalOcean, LLC",3
+1794,CA,prysm,Bell,3
+1795,LT,prysm,Telia Lietuva,3
+1796,CA,prysm,OVH SAS,3
+1797,AU,prysm,TPG,3
+1798,CN,prysm,China Telecom,3
+1799,CA,prysm,TELUS Communications Inc,3
+1800,US,prysm,Comcast,3
+1801,SG,prysm,"Singapore Telecommunications Ltd, Magix Services",3
+1802,US,prysm,AT&T,3
+1803,US,prysm,Charter,3
+1804,DE,prysm,Strato AG,3
+1805,US,lighthouse,Comcast,3
+1806,FR,prysm,Proxad / Free SAS,3
+1807,LT,prysm,Telia Lietuva,3
+1808,US,prysm,Comcast,3
+1809,ES,prysm,Uni2 XDSL customers YIF,3
+1810,US,prysm,Cablevision Systems Corp.,3
+1811,DE,prysm,Strato AG,3
+1812,DE,prysm,Strato AG,3
+1813,US,lighthouse,"Chequamegon Communications Cooperative, Inc.",3
+1814,CN,prysm,China Unicom,3
+1815,SG,prysm,"Singapore Telecommunications Ltd, Magix Services",3
+1816,US,prysm,Google Fiber,3
+1817,US,prysm,AT&T,3
+1818,TH,prysm,True Internet,3
+1819,CH,nimbus,Swisscom (Schweiz) AG - Bluewin,3
+1820,US,teku,Charter,3
+1821,ES,prysm,Uni2 XDSL customers YIF,3
+1822,FR,lighthouse,Societe Francaise Du Radiotelephone - SFR SA,3
+1823,DE,lighthouse,Vodafone,3
+1824,DE,prysm,Strato AG,3
+1825,CA,prysm,TELUS Communications Inc,3
+1826,CH,lighthouse,Datapark AG,3
+1827,DE,prysm,Strato AG,3
+1828,US,prysm,Verizon,3
+1829,US,prysm,Verizon,3
+1830,US,prysm,Comcast,3
+1831,BR,prysm,V tal,3
+1832,DE,prysm,Contabo GmbH,3
+1833,US,prysm,Cox,3
+1834,KR,prysm,Korea Telecom,3
+1835,DK,prysm,TDC Holding A/S,3
+1836,US,prysm,AT&T,3
+1837,US,prysm,Comcast,3
+1838,HK,lighthouse,PCCW IMS Limited,3
+1839,FI,lighthouse,Hetzner Online GmbH,3
+1840,SG,prysm,"DigitalOcean, LLC",3
+1841,CA,prysm,Bell,3
+1842,NO,lighthouse,Blix Solutions,3
+1843,CN,prysm,CNC Group CHINA169 Jiangxi Province Network,3
+1844,DE,lighthouse,Stadtnetz Bamberg Gesellschaft fuer Telekommunikation mbH,3
+1845,NL,prysm,Netwerkvereniging Coloclue,3
+1846,PL,prysm,Uniwersytet Zielonogorski (University of Zielona Gora),3
+1847,NO,prysm,Altibox,3
+1848,CA,teku,OVH SAS,3
+1849,DE,prysm,Hetzner Online GmbH,3
+1850,SG,lighthouse,Contabo Asia Private Limited,3
+1851,US,teku,Dedicated.com,3
+1852,US,prysm,CenturyLink,3
+1853,FI,lighthouse,Hetzner Online GmbH,3
+1854,CA,nimbus,Saskatchewan Telecommunications,3
+1855,DE,prysm,Strato AG,3
+1856,NL,prysm,Vodafone,3
+1857,CA,lighthouse,TELUS Communications Inc,3
+1858,US,prysm,OVH SAS,3
+1859,US,prysm,Comcast,3
+1860,CA,prysm,TELUS Communications Inc,3
+1861,SE,prysm,Telia Company AB,3
+1862,DE,nimbus,Deutsche Telekom,3
+1863,DE,prysm,Strato AG,3
+1864,DE,prysm,Strato AG,3
+1865,US,prysm,Verizon,3
+1866,KR,prysm,SK Broadband Co Ltd,3
+1867,US,prysm,Breezeline,3
+1868,SK,prysm,FLP Kochenov Aleksej Vladislavovich,3
+1869,ES,prysm,Uni2 XDSL customers YIF,3
+1870,BE,prysm,Telenet operaties N.V.,3
+1871,DE,prysm,Strato AG,3
+1872,FR,prysm,SCALEWAY,3
+1873,DE,prysm,Strato AG,3
+1874,DE,prysm,Strato AG,3
+1875,NL,prysm,Vodafone,3
+1876,AU,lighthouse,Telstra Corporation Limited,3
+1877,DE,prysm,Strato AG,3
+1878,US,lighthouse,Frontier,3
+1879,US,prysm,Comcast,3
+1880,DE,prysm,Contabo GmbH,3
+1881,CN,prysm,ChinaNet,3
+1882,US,nimbus,Google Fiber,3
+1883,LT,prysm,Telia Lietuva,3
+1884,TR,prysm,Contabo GmbH,3
+1885,NO,prysm,Altibox,3
