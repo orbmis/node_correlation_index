@@ -1,4 +1,5 @@
 import json
+import math
 import csv
 
 # Load the data
@@ -59,6 +60,48 @@ with open(csv_filename, mode='w', newline='') as csv_file:
         network_penetration = network_data["network_penetration"]
         clients_data = network_data["clients"]
         row = [network_penetration, *clients_data.values()]
+        writer.writerow(row)
+
+print(f"CSV file '{csv_filename}' has been created.")
+
+
+# Number of deciles
+num_deciles = 10
+
+# List of potential clients
+potential_clients = ["Nimbus", "Prysm", "Lighthouse", "Teku", "Lodestar", "Unknown"]
+
+# Initialize decile data structure
+decile_data = {i: {client: [] for client in potential_clients} for i in range(num_deciles)}
+
+print(decile_data)
+
+# Populate decile data structure
+for node_operator, node_data in result_dict.items():
+    network_penetration = node_data["network_penetration"] * 25
+    decile = math.floor(network_penetration / 10)
+    clients_data = node_data["clients"]
+
+    for client in potential_clients:
+        client_percentage = clients_data.get(client, 0)
+        decile_data[decile][client].append(client_percentage)
+
+# Calculate average percentage for each client in each decile
+average_data = {i: {client: sum(percentages) / len(percentages) if len(percentages) > 0 else 0 for client, percentages in decile_data[i].items()} for i in range(num_deciles)}
+
+# Writing to CSV
+csv_filename = "average_client_percentage_by_decile.csv"
+
+with open(csv_filename, mode='w', newline='') as csv_file:
+    writer = csv.writer(csv_file)
+
+    # Writing header
+    header = ["Network Penetration"] + potential_clients
+    writer.writerow(header)
+
+    # Writing data
+    for decile, client_percentages in average_data.items():
+        row = [f"{decile * 10}-{(decile + 1) * 10 - 1}"] + [client_percentages[client] for client in potential_clients]
         writer.writerow(row)
 
 print(f"CSV file '{csv_filename}' has been created.")
