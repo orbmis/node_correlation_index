@@ -5,9 +5,11 @@ def calculate_hhi(data):
     # Initialize lists to store unique relays, clients, and pools
     relays = ["manifold", "bloxroute_maxprofit", "agnostic", "no_mev_boost", "bloxroute_regulated", "ultra_sound_money", "aestus", "flashbots", "edennetwork"]
     clients = ["Nimbus", "Prysm", "Lighthouse", "Teku", "Lodestar", "Unknown"]
+    operators = set() 
     pool_names = set()
 
     # Create dictionaries to store relay and client percentages for each pool
+    node_operators = {}
     relay_percentages = {}
     client_percentages = {}
     market_shares = {}
@@ -22,6 +24,10 @@ def calculate_hhi(data):
             client_percentages.setdefault(pool_name, {})
             market_shares.setdefault(pool_name, 0)
             market_shares[pool_name] += pool["networkPenetration"]
+            node_operators.setdefault(pool_name, {})
+            node_operators[pool_name][item["displayName"]] = node_operators[pool_name].get(item["displayName"], 0) + pool["networkPenetration"]
+            operators.add(item["displayName"])
+
 
             for relay in relays:
                 relay_percentage = 0.0
@@ -64,13 +70,12 @@ def calculate_hhi(data):
     # Create a matrix for HHI calculation
     matrix = []
 
-    # TODO: matrix is missing market_share and operators
-
     for pool_name in pool_names:
         row = [pool_name]
         row.append(market_shares[pool_name])
         row.append(relay_percentages[pool_name])
         row.append(client_percentages[pool_name])
+        row.append(node_operators[pool_name])
         matrix.append(row)
 
     print(json.dumps(matrix, indent=4, sort_keys=True))
@@ -79,16 +84,29 @@ def calculate_hhi(data):
     hhi_value = 0.0
 
     for i in range(len(matrix)):
+        row_correlation_value = 0.0
+
         for j in range(len(matrix)):
             n_i = matrix[i][1] # market share of pool i
             n_j = matrix[j][1] # market share of pool j
 
-            c_ij = 0.0
+            relays_correlation = 0.0
             for relay in relays:
-                c_ij += min(matrix[i][2][relay], matrix[j][2][relay])
+                relays_correlation += min(matrix[i][2][relay], matrix[j][2][relay])
 
-            # TODO: should this be the square root?
-            hhi_value += math.sqrt(n_i * n_j) * c_ij
+            clients_correlation = 0.0
+            for clients in clients:
+                clients_correlation += min(matrix[i][3][client], matrix[j][3][client])
+
+            operators_correlation = 0.0
+            for operator in operators:
+                operators_correlation += min(matrix[i][4].get(operator, 0), matrix[j][4].get(operator, 0))
+
+            c_ij = relays_correlation + clients_correlation + operators_correlation
+
+            row_correlation_value += ((n_i * n_j) * c_ij) * 100
+
+        hhi_value += row_correlation_value
 
     return hhi_value
 
