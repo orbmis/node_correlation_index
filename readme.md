@@ -14,6 +14,7 @@ and then any of the other scripts to get the required data
 
 `index.py` calculates the modified HHI from the `data.csv` file, which comes from the Miga Labs dataset
 note that this isn't particularly useful
+
 the `miga_labs_correlations.py` script runs a more useful analysis on this dataset
 
 the script `rated_correlations.py` calculates the modified HHI for the rated labs dataset

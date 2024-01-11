@@ -1,7 +1,16 @@
 import math
 import json
 
-def calculate_hhi(data):
+def calculate_standard_hhi(data):
+    hhi = 0.0
+
+    for entity in data:
+        market_share = entity[1] * 100  # Extracting market share from the first element
+        hhi += market_share ** 2
+
+    return hhi
+
+def calculate_modified_hhi(data):
     # Initialize lists to store unique relays, clients, and pools
     relays = ["manifold", "bloxroute_maxprofit", "agnostic", "no_mev_boost", "bloxroute_regulated", "ultra_sound_money", "aestus", "flashbots", "edennetwork"]
     clients = ["Nimbus", "Prysm", "Lighthouse", "Teku", "Lodestar", "Unknown"]
@@ -78,10 +87,13 @@ def calculate_hhi(data):
         row.append(node_operators[pool_name])
         matrix.append(row)
 
-    print(json.dumps(matrix, indent=4, sort_keys=True))
+    # uncomment this line to view the final matrix that is used for the HHI calculation
+    # print(json.dumps(matrix, indent=4, sort_keys=True))
+
+    standard_hhi = calculate_standard_hhi(matrix)
 
     # Calculate HHI' value
-    hhi_value = 0.0
+    modified_hhi = 0.0
 
     for i in range(len(matrix)):
         row_correlation_value = 0.0
@@ -106,9 +118,9 @@ def calculate_hhi(data):
 
             row_correlation_value += ((n_i * n_j) * c_ij) * 100
 
-        hhi_value += row_correlation_value
+        modified_hhi += row_correlation_value
 
-    return hhi_value
+    return standard_hhi, modified_hhi
 
 json_data = []
 
@@ -118,6 +130,14 @@ file_path = 'collated.json'
 with open(file_path, 'r') as file:
     json_data = json.load(file)
 
-# Calculate HHI' value
-hhi_result = calculate_hhi(json_data)
-print("HHI' Value:", hhi_result)
+print("\nCalculating modified HHI for Staking Pools . . .\n")
+
+# Calculate HHI values
+hhi = calculate_modified_hhi(json_data)
+standard_hhi = hhi[0]
+modified_hhi = hhi[1]
+
+print("Standard HHI Value:", round(standard_hhi))
+print("Modified HHI Value:", round(modified_hhi))
+
+print("\n")
