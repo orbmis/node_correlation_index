@@ -5,29 +5,29 @@ def calculate_hhi(data):
     # Initialize lists to store unique relays, clients, and pools
     relays = ["manifold", "bloxroute_maxprofit", "agnostic", "no_mev_boost", "bloxroute_regulated", "ultra_sound_money", "aestus", "flashbots", "edennetwork"]
     clients = ["Nimbus", "Prysm", "Lighthouse", "Teku", "Lodestar", "Unknown"]
+    node_operators = set() 
     operators = set() 
     pool_names = set()
 
     # Create dictionaries to store relay and client percentages for each pool
-    node_operators = {}
     relay_percentages = {}
     client_percentages = {}
     market_shares = {}
 
     # Iterate over the data and populate relay_percentages and client_percentages dictionaries
     for item in data:
+        operator_name = item["displayName"]
+        node_operators.add(operator_name)
+        # market_shares[operator_name] += pool["totalNetworkPenetration"]
+
         for pool in item["pools"]:
             pool_name = pool["name"]
             pool_names.add(pool_name)
 
-            relay_percentages.setdefault(pool_name, {})
-            client_percentages.setdefault(pool_name, {})
-            market_shares.setdefault(pool_name, 0)
-            market_shares[pool_name] += pool["networkPenetration"]
-            node_operators.setdefault(pool_name, {})
-            node_operators[pool_name][item["displayName"]] = node_operators[pool_name].get(item["displayName"], 0) + pool["networkPenetration"]
-            operators.add(item["displayName"])
-
+            relay_percentages.setdefault(operator_name, {})
+            client_percentages.setdefault(operator_name, {})
+            market_shares.setdefault(operator_name, 0)
+            market_shares[operator_name] += pool["networkPenetration"]
 
             for relay in relays:
                 relay_percentage = 0.0
@@ -35,7 +35,7 @@ def calculate_hhi(data):
                     if relayer["relayer"] == relay:
                         relay_percentage = relayer["percentage"] * 100
                         break
-                relay_percentages[pool_name].setdefault(relay, []).append(relay_percentage)
+                relay_percentages[operator_name].setdefault(relay, []).append(relay_percentage)
 
             for client in clients:
                 client_percentage = 0.0
@@ -43,39 +43,38 @@ def calculate_hhi(data):
                     if client_percent["client"] == client:
                         client_percentage = client_percent["percentage"] * 100
                         break
-                client_percentages[pool_name].setdefault(client, []).append(client_percentage)
+                client_percentages[operator_name].setdefault(client, []).append(client_percentage)
     
     # After calculating relay_percentages, modify it to store the average value for each relay
-    for pool_name, relay_values in relay_percentages.items():
+    for operator_name, relay_values in relay_percentages.items():
         for relay, percentages in relay_values.items():
             if percentages:
                 # Calculate the average value and replace the array with the average
                 average_value = sum(percentages) / len(percentages)
-                relay_percentages[pool_name][relay] = average_value
+                relay_percentages[operator_name][relay] = average_value
             else:
                 # Handle the case where there are no values for the relay
-                relay_percentages[pool_name][relay] = 0.0
+                relay_percentages[operator_name][relay] = 0.0
     
     # After calculating client_percentages, modify it to store the average value for each client
-    for pool_name, client_values in client_percentages.items():
+    for operator_name, client_values in client_percentages.items():
         for client, percentages in client_values.items():
             if percentages:
                 # Calculate the average value and replace the array with the average
                 average_value = sum(percentages) / len(percentages)
-                client_percentages[pool_name][client] = average_value
+                client_percentages[operator_name][client] = average_value
             else:
                 # Handle the case where there are no values for the client
-                client_percentages[pool_name][client] = 0.0
+                client_percentages[operator_name][client] = 0.0
 
     # Create a matrix for HHI calculation
     matrix = []
 
-    for pool_name in pool_names:
-        row = [pool_name]
-        row.append(market_shares[pool_name])
-        row.append(relay_percentages[pool_name])
-        row.append(client_percentages[pool_name])
-        row.append(node_operators[pool_name])
+    for operator_name in node_operators:
+        row = [operator_name]
+        row.append(market_shares[operator_name])
+        row.append(relay_percentages[operator_name])
+        row.append(client_percentages[operator_name])
         matrix.append(row)
 
     print(json.dumps(matrix, indent=4, sort_keys=True))

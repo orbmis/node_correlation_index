@@ -17,3 +17,5 @@ note that this isn't particularly useful
 the `miga_labs_correlations.py` script runs a more useful analysis on this dataset
 
 the script `rated_correlations.py` calculates the modified HHI for the rated labs dataset
+
+the `staking_pools_HHI.py` file calculates the HHI and modified HHI for node operators
