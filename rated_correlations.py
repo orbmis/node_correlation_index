@@ -29,11 +29,6 @@ def calculate_common_pool_percentages(operator1, operator2):
                 # Take the smallest percentage of the two
                 common_percentage = min(percentage1, percentage2)
 
-                print(pool1['name'], pool2['name'], percentage1, percentage2, math.floor(common_percentage))
-
-                if math.floor(common_percentage) == 1519:
-                    print(percentage1, percentage2, operator1['name'], operator2['name'])
-
                 total_percentage += common_percentage
    
     # return the sum of all validatorCountPercentages
@@ -50,6 +45,9 @@ with open(file_path, 'r') as file:
 csv_file_path = 'output.csv'
 csv_columns = ['Operator Name', 'Market Share Percentage', 'Common Pool Percentage', 'Common Client Percentage', 'Common Relay Percentage']
 
+# Variables to store modified HHI components
+total_modified_hhi = 0
+
 with open(csv_file_path, 'w', newline='') as csv_file:
     print('\ncalculating correlations . . .\n')
 
@@ -59,16 +57,23 @@ with open(csv_file_path, 'w', newline='') as csv_file:
     # Iterate through each operator
     for i in range(len(data)):
         operator1 = data[i]
+        market_share_1 = operator1.get('totalNetworkPenetration', 0)
         
         # Initialize sums for each operator
         total_common_pools = 0
         total_common_client_percentage = 0
         total_common_relay_percentage = 0
 
+        market_share = operator1.get('totalNetworkPenetration', 0)
+
+        # Variables to store modified HHI for operator i
+        modified_hhi = 0
+
         # Compare with each other operator
         for j in range(len(data)):
             if i != j:
                 operator2 = data[j]
+                market_share_2 = operator2.get('totalNetworkPenetration', 0)
 
                 # Calculate common client and relay percentages
                 total_common_client_percentage += calculate_common_percentage(operator1, operator2, 'client')
@@ -77,7 +82,13 @@ with open(csv_file_path, 'w', newline='') as csv_file:
                 # Calculate the number of common pools
                 total_common_pools += calculate_common_pool_percentages(operator1, operator2)
 
-        market_share = operator1.get('totalNetworkPenetration', 0)
+                correlation_coefficient = total_common_pools + total_common_client_percentage + total_common_relay_percentage
+
+                # Update modified HHI for operator i
+                modified_hhi += math.sqrt(market_share_1 * market_share_2) * correlation_coefficient
+
+        # Update total modified HHI
+        total_modified_hhi += modified_hhi
 
         # Write to CSV
         writer.writerow({
@@ -88,4 +99,11 @@ with open(csv_file_path, 'w', newline='') as csv_file:
             'Common Relay Percentage': total_common_relay_percentage
         })
 
-print(f"CSV file created at {csv_file_path}\n")
+total_market_share_squared = sum(operator['totalNetworkPenetration'] ** 2 for operator in data)
+hhi = round(total_market_share_squared * 10000)  # Multiplying by 10000 for better readability
+
+print(f"\nHerfindahl–Hirschman Index (HHI): {hhi}")
+print(f"\nModified Herfindahl–Hirschman Index (HHI): {total_modified_hhi}")
+
+
+print(f"\nCSV file created at {csv_file_path}\n")
