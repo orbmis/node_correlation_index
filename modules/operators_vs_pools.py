@@ -1,9 +1,9 @@
 import json
 import csv
 
-def collate_operators_vs_pools():
+def collate_operators_vs_pools(input_file='collated.json', json_output_file='operators_vs_pools.json', csv_output_file='operators_vs_pools.csv'):
     # Read the input JSON file
-    with open('collated.json', 'r') as infile:
+    with open(input_file, 'r') as infile:
         data = json.load(infile)
 
     # Create a dictionary to store the desired output
@@ -42,19 +42,15 @@ def collate_operators_vs_pools():
             'pools': pool_data
         }
 
-    print(poollist)
-
     # Write the output data to a new JSON file
     print("\nCollating Operators vs. Pools\n")
-    with open('operators_vs_pools.json', 'w') as outfile:
+    with open(json_output_file, 'w') as outfile:
         json.dump(output_data, outfile, indent=2)
 
     # List of potential pools
     potential_pools = ['direct', 'Stealth Pool', 'Ledger Live', 'Lido', 'Swell', 'Fireblocks', 'Enzyme', 'Coinbase', 'Rocketpool', 'StakeHound', 'Stader - Permissionless', 'Stader - Permissioned', 'StakeWise', 'Octant']
 
-    csv_filename = "operators_vs_pools.csv"
-
-    with open(csv_filename, mode='w', newline='') as csv_file:
+    with open(csv_output_file, mode='w', newline='') as csv_file:
         writer = csv.writer(csv_file)
 
         # Writing header
@@ -72,4 +68,4 @@ def collate_operators_vs_pools():
             row = [node_operator, total_network_penetration] + pool_penetrations
             writer.writerow(row)
 
-    print(f"CSV file '{csv_filename}' has been created.")
+    print(f"CSV file '{csv_output_file}' has been created.")

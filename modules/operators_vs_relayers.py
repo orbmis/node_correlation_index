@@ -1,8 +1,8 @@
 import json
 
-def collate_operators_vs_relays():
+def collate_operators_vs_relays(input_file='collated.json', json_output_file='operators_vs_relayers.json', csv_output_file='operators_vs_relayers.csv'):
     # Load the data
-    with open('collated.json', 'r') as infile:
+    with open(input_file, 'r') as infile:
         data = json.load(infile)
 
     # Create a dictionary to store the result
@@ -35,7 +35,7 @@ def collate_operators_vs_relays():
 
     # Print the final result dictionary
     print("\nCollating Operators vs. Relayers\n")
-    with open('operators_vs_relayers.json', 'w', encoding='utf-8') as f:
+    with open(json_output_file, 'w', encoding='utf-8') as f:
         json.dump(result_dict, f, ensure_ascii=False, indent=2)
 
 # Uncomment the next line if you want to execute the collation function immediately
