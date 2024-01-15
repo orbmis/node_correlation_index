@@ -1,6 +1,11 @@
 import math
 import json
 
+# TODO: calculate coefficient of variation for clients, relays and pools for each operator
+# then each row in the dartaset will be operator, marke_share, client_CV, relay_CV, pool_CV
+# then we can calculate the pearson correlation coefficient from this dataset
+# this can be used to measure correlation between market share and client diveristy, or relay diversity, or operator pools
+
 def calculate_standard_hhi(data):
     hhi = 0.0
 
