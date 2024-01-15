@@ -20,9 +20,10 @@ def transform_data(input_file, output_file):
     with open(output_file, 'w') as outfile:
         json.dump(transformed_data, outfile, indent=2)
 
-# Specify the input and output file names
-input_filename = 'results.json'
-output_filename = 'data.json'
+if __name__ == "__main__":
+    # Specify the input and output file names
+    input_filename = 'results.json'
+    output_filename = 'data.json'
 
-# Call the function to transform the data
-transform_data(input_filename, output_filename)
+    # Call the function to transform the data
+    transform_data(input_filename, output_filename)

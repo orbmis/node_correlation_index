@@ -4,6 +4,10 @@ See the rated-api-info.txt file for info on their API calls
 
 See the problem-statement.txt file for info on the problem statement this is trying to address
 
+Install the requirements using the following command:
+
+`pip install -r requirements.txt`
+
 To run these scripts, run them in the following order:
 
 1. getdata.py

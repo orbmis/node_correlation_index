@@ -32,7 +32,6 @@ def calculate_modified_hhi(data):
     for item in data:
         operator_name = item["displayName"]
         node_operators.add(operator_name)
-        # market_shares[operator_name] += pool["totalNetworkPenetration"]
 
         for pool in item["pools"]:
             pool_name = pool["name"]
@@ -91,9 +90,6 @@ def calculate_modified_hhi(data):
         row.append(client_percentages[operator_name])
         matrix.append(row)
 
-    # uncomment this line to view the final matrix that is used for the HHI calculation
-    # print(json.dumps(matrix, indent=4, sort_keys=True))
-
     standard_hhi = calculate_standard_hhi(matrix)
 
     # Calculate HHI' value
@@ -124,25 +120,24 @@ def calculate_modified_hhi(data):
 
         modified_hhi += row_correlation_value
 
-    # return hhi_value
     return standard_hhi, modified_hhi
 
-json_data = []
+def analyze_node_operators_HHI(file_path='collated.json'):
+    # Load JSON data from file
+    with open(file_path, 'r') as file:
+        json_data = json.load(file)
 
-file_path = 'collated.json'
+    print("\nCalculating modified HHI for Node Operators . . .\n")
 
-# Load JSON data from file
-with open(file_path, 'r') as file:
-    json_data = json.load(file)
+    # Calculate HHI values
+    hhi = calculate_modified_hhi(json_data)
+    standard_hhi = hhi[0]
+    modified_hhi = hhi[1]
 
-print("\nCalculating modified HHI for Node Operators . . .\n")
+    print("Standard HHI Value:", round(standard_hhi))
+    print("Modified HHI Value:", round(modified_hhi))
 
-# Calculate HHI values
-hhi = calculate_modified_hhi(json_data)
-standard_hhi = hhi[0]
-modified_hhi = hhi[1]
+    print("\n")
 
-print("Standard HHI Value:", round(standard_hhi))
-print("Modified HHI Value:", round(modified_hhi))
-
-print("\n")
+if __name__ == "__main__":
+    analyze_node_operators_HHI()

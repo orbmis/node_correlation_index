@@ -37,7 +37,6 @@ def calculate_modified_hhi(data):
             node_operators[pool_name][item["displayName"]] = node_operators[pool_name].get(item["displayName"], 0) + pool["networkPenetration"]
             operators.add(item["displayName"])
 
-
             for relay in relays:
                 relay_percentage = 0.0
                 for relayer in pool["relayerPercentages"]:
@@ -87,9 +86,6 @@ def calculate_modified_hhi(data):
         row.append(node_operators[pool_name])
         matrix.append(row)
 
-    # uncomment this line to view the final matrix that is used for the HHI calculation
-    # print(json.dumps(matrix, indent=4, sort_keys=True))
-
     standard_hhi = calculate_standard_hhi(matrix)
 
     # Calculate HHI' value
@@ -107,7 +103,7 @@ def calculate_modified_hhi(data):
                 relays_correlation += min(matrix[i][2][relay], matrix[j][2][relay])
 
             clients_correlation = 0.0
-            for clients in clients:
+            for client in clients:
                 clients_correlation += min(matrix[i][3][client], matrix[j][3][client])
 
             operators_correlation = 0.0
@@ -122,22 +118,22 @@ def calculate_modified_hhi(data):
 
     return standard_hhi, modified_hhi
 
-json_data = []
+def analyze_staking_pools_HHI(file_path='collated.json'):
+    # Load JSON data from file
+    with open(file_path, 'r') as file:
+        json_data = json.load(file)
 
-file_path = 'collated.json'
+    print("\nCalculating modified HHI for Staking Pools . . .\n")
 
-# Load JSON data from file
-with open(file_path, 'r') as file:
-    json_data = json.load(file)
+    # Calculate HHI values
+    hhi = calculate_modified_hhi(json_data)
+    standard_hhi = hhi[0]
+    modified_hhi = hhi[1]
 
-print("\nCalculating modified HHI for Staking Pools . . .\n")
+    print("Standard HHI Value:", round(standard_hhi))
+    print("Modified HHI Value:", round(modified_hhi))
 
-# Calculate HHI values
-hhi = calculate_modified_hhi(json_data)
-standard_hhi = hhi[0]
-modified_hhi = hhi[1]
+    print("\n")
 
-print("Standard HHI Value:", round(standard_hhi))
-print("Modified HHI Value:", round(modified_hhi))
-
-print("\n")
+if __name__ == "__main__":
+    analyze_staking_pools_HHI()

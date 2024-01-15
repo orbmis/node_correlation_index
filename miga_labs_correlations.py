@@ -90,7 +90,6 @@ def get_hamming(df_full, attributes):
 
     return matrix
 
-
 # Cramér's V calculation method
 def cramers_v(table):
     chi2, _, _, _ = chi2_contingency(table)
@@ -102,58 +101,62 @@ def cramers_v(table):
     kcorr = k - ((k - 1) ** 2) / (n - 1)
     return (phi2corr / min((kcorr - 1), (rcorr - 1))) ** 0.5
 
-# Read the CSV file into a pandas DataFrame
-file_path = 'data.csv'
-df = pd.read_csv(file_path)
+def analyze_data(file_path='data.csv'):
+    # Read the CSV file into a pandas DataFrame
+    df = pd.read_csv(file_path)
 
-# Create a list of attribute columns to compare
-attribute_columns = df.columns[1:]
+    # Create a list of attribute columns to compare
+    attribute_columns = df.columns[1:]
 
-print("\nProcessing data . . .")
+    print("\nProcessing data . . .")
 
-# Perform pairwise attribute comparison and calculate chi-squared values
-for i in range(len(attribute_columns) - 1):
-    for j in range(i + 1, len(attribute_columns)):
-        attr1 = attribute_columns[i]
-        attr2 = attribute_columns[j]
+    # Perform pairwise attribute comparison and calculate chi-squared values
+    for i in range(len(attribute_columns) - 1):
+        for j in range(i + 1, len(attribute_columns)):
+            attr1 = attribute_columns[i]
+            attr2 = attribute_columns[j]
 
-        # Create a contingency table
-        contingency_table = pd.crosstab(df[attr1], df[attr2])
+            # Create a contingency table
+            contingency_table = pd.crosstab(df[attr1], df[attr2])
 
-        print(f"\nPairwise Comparison: {attr1} vs {attr2}")
-        # logger.info(f"Contingency Table:\n{contingency_table}")
+            print(f"\nPairwise Comparison: {attr1} vs {attr2}")
+            # logger.info(f"Contingency Table:\n{contingency_table}")
 
-        # Calculate chi-squared statistic and p-value
-        chi2, p, _, _ = chi2_contingency(contingency_table)
+            # Calculate chi-squared statistic and p-value
+            chi2, p, _, _ = chi2_contingency(contingency_table)
 
-        print(f"Chi-squared Value: {chi2}")
-        print(f"P-value: {p}")
+            print(f"Chi-squared Value: {chi2}")
+            print(f"P-value: {p}")
 
-        # Calculate Cramér's V
-        v = cramers_v(contingency_table)
-        print(f"Cramér's V: {v}")
+            # Calculate Cramér's V
+            v = cramers_v(contingency_table)
+            print(f"Cramér's V: {v}")
 
-print("\n\n")
+    print("\n\n")
 
-attributes_to_compare = ['country_code', 'client_name', 'isp_alias', 'att_subnets']
+    attributes_to_compare = ['country_code', 'client_name', 'isp_alias', 'att_subnets']
 
-resulting_hamming_weights = get_hamming(df, attributes_to_compare)
+    resulting_hamming_weights = get_hamming(df, attributes_to_compare)
 
-hamming_csv = array_to_csv_string(resulting_hamming_weights)
+    hamming_csv = array_to_csv_string(resulting_hamming_weights)
 
-# Print or use resulting_hamming_weights as needed
-print(hamming_csv)
+    # Print or use resulting_hamming_weights as needed
+    print(hamming_csv)
 
-print("\n")
+    print("\n")
 
-# Call the function with the default value of n (25)
-result = sort_and_get_top_entries(resulting_hamming_weights, 10)
+    # Call the function with the default value of n (25)
+    result = sort_and_get_top_entries(resulting_hamming_weights, 10)
 
-for x in result:
-    print(df.iloc[x])
+    for x in result:
+        print(df.iloc[x])
 
-# Print or use the result as needed
-print(result)
+    # Print or use the result as needed
+    print(result)
+
+if __name__ == "__main__":
+    analyze_data()
+
 
 # TODO: once we sort the results in ascending order, we can iterate over each record to determine which attribute has the highest hamming weight
 # this will result in a table of "index,attrbute", where "attribute" is the attribute with the highest correlation to other node for that record
