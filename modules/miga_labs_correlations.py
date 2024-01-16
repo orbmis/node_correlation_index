@@ -66,6 +66,18 @@ def sort_and_get_top_entries(data_array, n=25):
     return top_first_column_entries
 
 def get_hamming(df_full, attributes):
+    """
+    For every record in the dataset, we compare it to every other record in the dataset along a specific attribute.
+    Where the attributes are equal for each record, we record a 1, where they are not equal, we record 0.
+    The result is a bitstring from which we can derive a hamming weight.
+    An easier way to calculate the hamming weight is to increment a count every time the attributes for each record being compared are equal.
+    We then repeat the entire process for the next attribute.
+
+    The result is a series hamming weights for each record compared to every other record, for each attribute.
+    We then add all the hamming weights together for each record, so every record has an aggregate hamming weight.
+    The results are a table with the record index in column 1, a column for the hamming weight of each attribute,
+    and a column for the sum of all hamming weights for that record.
+    """
     # df = df_full.head(100)
     df = df_full
 
@@ -108,7 +120,8 @@ def analyze_data(file_path='data.csv'):
     # Create a list of attribute columns to compare
     attribute_columns = df.columns[1:]
 
-    print("\nProcessing data . . .")
+    print("\nProcessing data on nodes from Miga Labs dataset . . .")
+    print("=" * 53)
 
     # Perform pairwise attribute comparison and calculate chi-squared values
     for i in range(len(attribute_columns) - 1):
@@ -132,9 +145,13 @@ def analyze_data(file_path='data.csv'):
             v = cramers_v(contingency_table)
             print(f"Cramér's V: {v}")
 
-    print("\n\n")
+    print("\n")
+    print("=" * 53)
+    print("\n")
 
     attributes_to_compare = ['country_code', 'client_name', 'isp_alias', 'att_subnets']
+
+    print("Calcualting Hamming weights across each attribute . . .\n")
 
     resulting_hamming_weights = get_hamming(df, attributes_to_compare)
 
@@ -148,11 +165,17 @@ def analyze_data(file_path='data.csv'):
     # Call the function with the default value of n (25)
     result = sort_and_get_top_entries(resulting_hamming_weights, 10)
 
+    print("Top 10 Nodes sorted by Aggregate Hamming Weight...\n")
+    print("=" * 50)
+    print("\n")
+
     for x in result:
         print(df.iloc[x])
+        print("\n")
 
     # Print or use the result as needed
     print(result)
+    print("\n")
 
 if __name__ == "__main__":
     analyze_data()

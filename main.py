@@ -58,25 +58,28 @@ def operator_vs_relays():
     collate_operators_vs_relays(input_file, json_output_file, csv_output_file)
 
 def run_analysis():
-    # transform data
-    input_filename, output_filename, _, _ = get_filenames(data_folder, 'results')
-    transform_data(input_filename, output_filename)
+    transform()
+    print("-" * 80)
 
-    # collate data
-    input_filename, output_filename, _, _ = get_filenames(data_folder, 'data')
-    collate_data(input_filename, output_filename)
+    collate()
+    print("-" * 80)
 
-    # analyze nodes
-    input_filename, _, _, _ = get_filenames(data_folder, 'data')
-    analyze_data(input_filename)
+    analyze_node_operators()
+    print("-" * 80)
 
-    # analyze node operators
-    input_filename, _, _, _ = get_filenames(data_folder, 'collated')
-    analyze_node_operators_HHI(input_filename)
+    analyze_staking_pools()
+    print("-" * 80)
 
-    # analyze staking pools
-    input_filename, _, _, _ = get_filenames(data_folder, 'collated')
-    analyze_staking_pools_HHI(input_filename)
+    operator_vs_clients()
+    print("-" * 80)
+
+    operator_vs_pools()
+    print("-" * 80)
+
+    operator_vs_relays()
+    print("-" * 80)
+
+    analyze_nodes()
 
 def get_filenames(data_folder, file_prefix):
     input_filename = f"{data_folder}{file_prefix}.json"
@@ -87,7 +90,7 @@ def get_filenames(data_folder, file_prefix):
 
 def main():
     parser = argparse.ArgumentParser(description='Your application description.')
-    parser.add_argument('command', choices=['transform', 'collate', 'analyze-nodes', 'analyze-node-operators', 'analyze-staking-pools', 'operators-vs-clients', 'operators-vs-pools', 'operators-vs-relays'], help='Choose which script to run.')
+    parser.add_argument('command', choices=['transform', 'collate', 'analyze-nodes', 'analyze-node-operators', 'analyze-staking-pools', 'operators-vs-clients', 'operators-vs-pools', 'operators-vs-relays', 'run-analysis'], help='Choose which script to run.')
 
     args = parser.parse_args()
     data_folder = 'data/'

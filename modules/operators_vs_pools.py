@@ -43,7 +43,8 @@ def collate_operators_vs_pools(input_file='collated.json', json_output_file='ope
         }
 
     # Write the output data to a new JSON file
-    print("Collating Operators vs. Pools\n")
+    print("\nCollating Operators vs. Pools\n")
+
     with open(json_output_file, 'w') as outfile:
         json.dump(output_data, outfile, indent=2)
 

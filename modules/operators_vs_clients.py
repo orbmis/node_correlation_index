@@ -42,7 +42,8 @@ def collate_operators_vs_clients(input_file='collated.json', json_output_file='o
                 result_dict[entity_name]['clients'][client_name] += (client_percentage['percentage'] * 100) / total_pools
 
     # Print the final result dictionary
-    print("Collating Operators vs. Clients\n")
+    print("\nCollating Operators vs. Clients\n")
+
     with open(json_output_file, 'w', encoding='utf-8') as f:
         json.dump(result_dict, f, ensure_ascii=False, indent=2)
 
@@ -61,7 +62,7 @@ def collate_operators_vs_clients(input_file='collated.json', json_output_file='o
             row = [network_penetration, *clients_data.values()]
             writer.writerow(row)
 
-    print(f"CSV file '{csv_output_file}' has been created.\n")
+    print(f"CSV file '{csv_output_file}' has been created.")
 
 def calculate_average_client_percentage_by_decile(json_data, num_deciles=10, potential_clients=None):
     if potential_clients is None:
@@ -84,7 +85,7 @@ def calculate_average_client_percentage_by_decile(json_data, num_deciles=10, pot
     average_data = {i: {client: sum(percentages) / len(percentages) if len(percentages) > 0 else 0 for client, percentages in decile_data[i].items()} for i in range(num_deciles)}
 
     # Writing to CSV
-    csv_filename = "average_client_percentage_by_decile.csv"
+    csv_filename = "data/average_client_percentage_by_decile.csv"
 
     with open(csv_filename, mode='w', newline='') as csv_file:
         writer = csv.writer(csv_file)
@@ -98,7 +99,7 @@ def calculate_average_client_percentage_by_decile(json_data, num_deciles=10, pot
             row = [f"{decile * 10}-{(decile + 1) * 10 - 1}"] + [client_percentages[client] for client in potential_clients]
             writer.writerow(row)
 
-    print(f"CSV file '{csv_filename}' has been created.")
+    print(f"CSV file '{csv_filename}' has been created.\n")
 
 if __name__ == "__main__":
     collate_operators_vs_clients()
