@@ -1,63 +1,114 @@
 # main.py
 import argparse
-
+import json
 from modules.transform import transform_data
 from modules.collate import collate_data
 from modules.miga_labs_correlations import analyze_data
 from modules.node_operators_HHI import analyze_node_operators_HHI
 from modules.staking_pools_HHI import analyze_staking_pools_HHI
 from modules.operators_vs_clients import collate_operators_vs_clients
+from modules.operators_vs_clients import calculate_average_client_percentage_by_decile
 from modules.operators_vs_pools import collate_operators_vs_pools
 from modules.operators_vs_relayers import collate_operators_vs_relays
 
+data_folder = "data/"
+
+def transform():
+    input_filename = f"{data_folder}/results.json"
+    output_filename = f"{data_folder}/data.json"
+    transform_data(input_filename, output_filename)
+
+def collate():
+    input_filename = f"{data_folder}/data.json"
+    output_filename = f"{data_folder}/collated.json"
+    collate_data(input_filename, output_filename)
+
+def analyze_nodes():
+    _, _, _, input_filename = get_filenames(data_folder, 'data')
+    analyze_data(input_filename)
+
+def analyze_node_operators():
+    input_filename, _, _, _ = get_filenames(data_folder, 'collated')
+    analyze_node_operators_HHI(input_filename)
+
+def analyze_staking_pools():
+    input_filename, _, _, _ = get_filenames(data_folder, 'collated')
+    analyze_staking_pools_HHI(input_filename)
+
+def operator_vs_clients():
+    _, _, json_output_file, csv_output_file = get_filenames(data_folder, 'operators_vs_clients')
+    input_file = f"{data_folder}/collated.json"
+
+    collate_operators_vs_clients(input_file, json_output_file, csv_output_file)
+
+    with open('data/operators_vs_clients.json', 'r') as json_file:
+        json_data = json.load(json_file)
+        calculate_average_client_percentage_by_decile(json_data)
+
+def operator_vs_pools():
+    input_file, _, json_output_file, csv_output_file = get_filenames(data_folder, 'operators_vs_pools')
+    input_file = f"{data_folder}/collated.json"
+
+    collate_operators_vs_pools(input_file, json_output_file, csv_output_file)
+
+def operator_vs_relays():
+    input_file, _, json_output_file, csv_output_file = get_filenames(data_folder, 'operators_vs_relays')
+    input_file = f"{data_folder}/collated.json"
+
+    collate_operators_vs_relays(input_file, json_output_file, csv_output_file)
+
+def run_analysis():
+    # transform data
+    input_filename, output_filename, _, _ = get_filenames(data_folder, 'results')
+    transform_data(input_filename, output_filename)
+
+    # collate data
+    input_filename, output_filename, _, _ = get_filenames(data_folder, 'data')
+    collate_data(input_filename, output_filename)
+
+    # analyze nodes
+    input_filename, _, _, _ = get_filenames(data_folder, 'data')
+    analyze_data(input_filename)
+
+    # analyze node operators
+    input_filename, _, _, _ = get_filenames(data_folder, 'collated')
+    analyze_node_operators_HHI(input_filename)
+
+    # analyze staking pools
+    input_filename, _, _, _ = get_filenames(data_folder, 'collated')
+    analyze_staking_pools_HHI(input_filename)
+
+def get_filenames(data_folder, file_prefix):
+    input_filename = f"{data_folder}{file_prefix}.json"
+    output_filename = f"{data_folder}{file_prefix}.json"
+    json_output_file = f"{data_folder}{file_prefix}.json"
+    csv_output_file = f"{data_folder}{file_prefix}.csv"
+    return input_filename, output_filename, json_output_file, csv_output_file
+
 def main():
     parser = argparse.ArgumentParser(description='Your application description.')
-    parser.add_argument('command', choices=['transform', 'collate', 'analyze-nodes', 'analyze-node-operators', 'analyze-staking-pools', 'operator-vs-clients', 'operator-vs-pools', 'operator-vs-relays'], help='Choose which script to run.')
+    parser.add_argument('command', choices=['transform', 'collate', 'analyze-nodes', 'analyze-node-operators', 'analyze-staking-pools', 'operators-vs-clients', 'operators-vs-pools', 'operators-vs-relays'], help='Choose which script to run.')
 
     args = parser.parse_args()
-
     data_folder = 'data/'
 
-    if args.command == 'transform':
-        input_filename = data_folder + 'results.json'
-        output_filename = data_folder + 'data.json'
+    commands = {
+        'transform': transform,
+        'collate': collate,
+        'analyze-nodes': analyze_nodes,
+        'analyze-node-operators': analyze_node_operators,
+        'analyze-staking-pools': analyze_staking_pools,
+        'operators-vs-clients': operator_vs_clients,
+        'operators-vs-pools': operator_vs_pools,
+        'operators-vs-relays': operator_vs_relays,
+        'run-analysis': run_analysis
+    }
 
-        transform_data(input_filename, output_filename)
-    elif args.command == 'collate':
-        input_filename = data_folder + 'data.json'
-        output_filename = data_folder + 'collated.json'
-
-        collate_data(input_filename, output_filename)
-    elif args.command == 'analyze-nodes':
-        input_filename = data_folder + 'data.csv'
-
-        analyze_data(input_filename)
-    elif args.command == 'analyze-node-operators':
-        input_filename = data_folder + 'collated.json'
-
-        analyze_node_operators_HHI(input_filename)
-    elif args.command == 'analyze-staking-pools':
-        input_filename = data_folder + 'collated.json'
-
-        analyze_staking_pools_HHI(input_filename)
-    elif args.command == 'operator-vs-clients':
-        input_file = data_folder + 'collated.json'
-        json_output_file = data_folder + 'operators_vs_clients.json'
-        csv_output_file = data_folder + 'operators_vs_clients.csv'
-
-        collate_operators_vs_clients(input_file, json_output_file, csv_output_file)
-    elif args.command == 'operator-vs-pools':
-        input_file = data_folder + 'collated.json'
-        json_output_file = data_folder + 'operators_vs_pools.json'
-        csv_output_file = data_folder + 'operators_vs_pools.csv'
-
-        collate_operators_vs_pools(input_file, json_output_file, csv_output_file)
-    elif args.command == 'operator-vs-relays':
-        input_file = data_folder + 'collated.json'
-        json_output_file = data_folder + 'operators_vs_relays.json'
-        csv_output_file = data_folder + 'operators_vs_relays.csv'
-
-        collate_operators_vs_relays(input_file, json_output_file, csv_output_file)
+    selected_command = commands.get(args.command)
+    if selected_command:
+        selected_command()
+    else:
+        print("Invalid command. Please choose a valid command.")
 
 if __name__ == "__main__":
     main()

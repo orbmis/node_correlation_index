@@ -24,3 +24,10 @@ the `miga_labs_correlations.py` script runs a more useful analysis on this datas
 the script `rated_correlations.py` calculates the modified HHI for the rated labs dataset
 
 the `staking_pools_HHI.py` file calculates the HHI and modified HHI for node operators
+
+----
+
+Seed Data:
+
+results.json: this is the data pulled down from the rated.network API
+data.csv: this is the data from Miga Labs

@@ -141,7 +141,7 @@ def analyze_data(file_path='data.csv'):
     hamming_csv = array_to_csv_string(resulting_hamming_weights)
 
     # Print or use resulting_hamming_weights as needed
-    print(hamming_csv)
+    # print(hamming_csv)
 
     print("\n")
 

@@ -43,7 +43,7 @@ def collate_operators_vs_pools(input_file='collated.json', json_output_file='ope
         }
 
     # Write the output data to a new JSON file
-    print("\nCollating Operators vs. Pools\n")
+    print("Collating Operators vs. Pools\n")
     with open(json_output_file, 'w') as outfile:
         json.dump(output_data, outfile, indent=2)
 
@@ -68,4 +68,4 @@ def collate_operators_vs_pools(input_file='collated.json', json_output_file='ope
             row = [node_operator, total_network_penetration] + pool_penetrations
             writer.writerow(row)
 
-    print(f"CSV file '{csv_output_file}' has been created.")
+    print(f"CSV file '{csv_output_file}' has been created.\n")
