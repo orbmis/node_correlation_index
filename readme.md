@@ -29,5 +29,5 @@ the `staking_pools_HHI.py` file calculates the HHI and modified HHI for node ope
 
 Seed Data:
 
-results.json: this is the data pulled down from the rated.network API
+results.json: this is the data pulled down from the rated.network API, on the 16th January 2024
 data.csv: this is the data from Miga Labs
