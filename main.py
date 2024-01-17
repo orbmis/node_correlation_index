@@ -86,6 +86,7 @@ def get_filenames(data_folder, file_prefix):
     output_filename = f"{data_folder}{file_prefix}.json"
     json_output_file = f"{data_folder}{file_prefix}.json"
     csv_output_file = f"{data_folder}{file_prefix}.csv"
+
     return input_filename, output_filename, json_output_file, csv_output_file
 
 def main():
@@ -108,6 +109,7 @@ def main():
     }
 
     selected_command = commands.get(args.command)
+
     if selected_command:
         selected_command()
     else:

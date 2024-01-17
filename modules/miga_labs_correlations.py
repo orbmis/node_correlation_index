@@ -61,9 +61,9 @@ def sort_and_get_top_entries(data_array, n=25):
     top_entries = sorted_array[:n]
 
     # Extract the first values from the first column of the top n entries
-    top_first_column_entries = [entry[0] for entry in sorted_array[:n]]
+    top_last_column_entries = [entry[5] for entry in sorted_array[:n]]
 
-    return top_first_column_entries
+    return top_last_column_entries
 
 def get_hamming(df_full, attributes):
     """

@@ -38,6 +38,3 @@ def collate_operators_vs_relays(input_file='collated.json', json_output_file='op
 
     with open(json_output_file, 'w', encoding='utf-8') as f:
         json.dump(result_dict, f, ensure_ascii=False, indent=2)
-
-# Uncomment the next line if you want to execute the collation function immediately
-# collate_operators_vs_relays()
