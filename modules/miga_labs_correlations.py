@@ -3,6 +3,7 @@ from scipy.stats import chi2_contingency
 import logging
 from tqdm import tqdm
 import csv
+import json
 from io import StringIO
 
 # Configure logging
@@ -165,17 +166,20 @@ def analyze_data(file_path='data.csv'):
     # Call the function with the default value of n (25)
     result = sort_and_get_top_entries(resulting_hamming_weights, 10)
 
-    print("Top 10 Nodes sorted by Aggregate Hamming Weight...\n")
-    print("=" * 50)
-    print("\n")
+    print_top_hamming_weights = False
 
-    for x in result:
-        print(df.iloc[x])
+    if print_top_hamming_weights:
+        print("Top 10 Nodes sorted by Aggregate Hamming Weight...\n")
+        print("=" * 50)
         print("\n")
 
-    # Print or use the result as needed
-    print(result)
-    print("\n")
+        for x in range(len(result)):
+            print(df.iloc[x])
+            print("\n")
+
+        # Print or use the result as needed
+        print(result)
+        print("\n")
 
 if __name__ == "__main__":
     analyze_data()
