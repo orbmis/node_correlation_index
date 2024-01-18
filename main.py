@@ -57,30 +57,6 @@ def operator_vs_relays():
 
     collate_operators_vs_relays(input_file, json_output_file, csv_output_file)
 
-def run_analysis():
-    transform()
-    print("-" * 80)
-
-    collate()
-    print("-" * 80)
-
-    analyze_node_operators()
-    print("-" * 80)
-
-    analyze_staking_pools()
-    print("-" * 80)
-
-    operator_vs_clients()
-    print("-" * 80)
-
-    operator_vs_pools()
-    print("-" * 80)
-
-    operator_vs_relays()
-    print("-" * 80)
-
-    analyze_nodes()
-
 def get_filenames(data_folder, file_prefix):
     input_filename = f"{data_folder}{file_prefix}.json"
     output_filename = f"{data_folder}{file_prefix}.json"
@@ -99,18 +75,23 @@ def main():
     commands = {
         'transform': transform,
         'collate': collate,
-        'analyze-nodes': analyze_nodes,
         'analyze-node-operators': analyze_node_operators,
         'analyze-staking-pools': analyze_staking_pools,
         'operators-vs-clients': operator_vs_clients,
         'operators-vs-pools': operator_vs_pools,
         'operators-vs-relays': operator_vs_relays,
-        'run-analysis': run_analysis
+        'analyze-nodes': analyze_nodes
     }
+
+    command_list = list(commands.values())
 
     selected_command = commands.get(args.command)
 
-    if selected_command:
+    if args.command == "run-analysis":
+        for method in command_list:
+            method()
+            print("-" * 80)
+    elif selected_command:
         selected_command()
     else:
         print("Invalid command. Please choose a valid command.")
