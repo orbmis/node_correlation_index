@@ -76,3 +76,11 @@ The motivation for running this sort of analysis is to identify potential correl
 * Do cloud instances prefer certain software compared to bare metal servers?
 * Do certain staking pools have similar policies that their node operators follow?
 * which node operators are the most highly correlated across all attributes and why?
+
+### Miscellaneous
+
+You can apply formatting to all the Python modules in this package by running the following command in the root folder:
+
+```
+$ python -m black .
+```
