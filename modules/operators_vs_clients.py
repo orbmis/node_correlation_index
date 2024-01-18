@@ -30,6 +30,7 @@ def collate_operators_vs_clients(input_file='collated.json', json_output_file='o
                 result_dict[entity_name]['clients']['Unknown'] = 0
 
         total_pools = 0
+
         for pool in entity.get('pools', []):
             total_pools += 1
 
@@ -71,10 +72,13 @@ def calculate_average_client_percentage_by_decile(json_data, num_deciles=10, pot
     # Initialize decile data structure
     decile_data = {i: {client: [] for client in potential_clients} for i in range(num_deciles)}
 
+    # the scale factor is scale the results so that they don't all appear in the first decile
+    # in reality deciles 1 - 9 actually in the first decile, .e 0.0 - 0.99
+    scale_factor = 2.5
+
     # Populate decile data structure
     for node_operator, node_data in json_data.items():
-        network_penetration = node_data["network_penetration"] * 25
-        decile = math.floor(network_penetration / 10)
+        decile = math.floor(node_data["network_penetration"] * scale_factor)
         clients_data = node_data["clients"]
 
         for client in potential_clients:

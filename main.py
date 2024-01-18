@@ -10,6 +10,7 @@ from modules.operators_vs_clients import collate_operators_vs_clients
 from modules.operators_vs_clients import calculate_average_client_percentage_by_decile
 from modules.operators_vs_pools import collate_operators_vs_pools
 from modules.operators_vs_relayers import collate_operators_vs_relays
+from modules.operators_vs_relayers import calculate_average_relayer_percentage_by_decile
 
 data_folder = "data/"
 
@@ -56,6 +57,10 @@ def operator_vs_relays():
     input_file = f"{data_folder}/collated.json"
 
     collate_operators_vs_relays(input_file, json_output_file, csv_output_file)
+
+    with open('data/operators_vs_relays.json', 'r') as json_file:
+        json_data = json.load(json_file)
+        calculate_average_relayer_percentage_by_decile(json_data)
 
 def get_filenames(data_folder, file_prefix):
     input_filename = f"{data_folder}{file_prefix}.json"
