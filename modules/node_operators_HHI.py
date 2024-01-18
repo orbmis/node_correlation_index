@@ -6,6 +6,90 @@ import json
 # then we can calculate the pearson correlation coefficient from this dataset
 # this can be used to measure correlation between market share and client diveristy, or relay diversity, or operator pools
 
+
+def calculate_r_squared(data, x, y):
+    """
+    Calculate R^2 value from Pearson's correlation coefficient for the 3rd and 4th values across all elements.
+
+    Parameters:
+    - data: Two-dimensional array containing the relevant data.
+
+    Returns:
+    - r_squared: R^2 value.
+    """
+    # Extract the relevant columns for calculation (3rd and 4th values)
+    x_values = [row[x] for row in data[1:]]
+    y_values = [row[y] for row in data[1:]]
+
+    # Calculate the mean of x_values and y_values
+    mean_x = sum(x_values) / len(x_values)
+    mean_y = sum(y_values) / len(y_values)
+
+    # Calculate Pearson's correlation coefficient (r)
+    numerator = sum((x - mean_x) * (y - mean_y) for x, y in zip(x_values, y_values))
+    denominator_x = sum((x - mean_x)**2 for x in x_values)
+    denominator_y = sum((y - mean_y)**2 for y in y_values)
+
+    r = numerator / (denominator_x**0.5 * denominator_y**0.5)
+
+    # Calculate R^2 from Pearson's correlation coefficient
+    r_squared = r**2
+
+    return r_squared
+
+def calculate_coefficient_of_variation(data):
+    """
+    Calculate the coefficient of variation for a given array of real numbers.
+
+    Parameters:
+    - data: list of real numbers
+
+    Returns:
+    - coefficient_of_variation: float
+    """
+    mean_value = 0
+
+    # Calculate the mean
+    if len(data) != 0:
+        mean_value = sum(data) / len(data)
+    
+    # Calculate the sum of squared differences from the mean
+    sum_squared_diff = sum((x - mean_value)**2 for x in data)
+
+    std_dev = 0
+    
+    # Calculate the standard deviation
+    if (len(data) - 1)**0.5 != 0:
+        std_dev = (sum_squared_diff / (len(data) - 1))**0.5
+    
+    # Calculate the coefficient of variation
+    coefficient_of_variation = 0
+
+    if mean_value != 0:
+        coefficient_of_variation = (std_dev / mean_value) * 100
+    
+    return coefficient_of_variation
+
+def calculate_variability(data):
+    # Extracting relevant data
+    names = [entry[0] for entry in data]
+    market_shares = [entry[1] for entry in data]
+    relay_percentages = [list(value for value in entry[2].values() if value != 0) for entry in data]
+    client_percentages = [list(value for value in entry[3].values() if value != 0) for entry in data]
+
+    # Calculate covariance
+    relay_covariance = [calculate_coefficient_of_variation(category) for category in relay_percentages]
+    client_covariance = [calculate_coefficient_of_variation(category) for category in client_percentages]
+
+    # Create the result array
+    result = [["name", "market share", "relay covariance", "client covariance"]]
+
+    # Populate the result array with calculated values
+    for i in range(len(data)):
+       result.append([names[i], market_shares[i], relay_covariance[i], client_covariance[i]])
+
+    return result
+
 def calculate_standard_hhi(data):
     hhi = 0.0
 
@@ -89,6 +173,17 @@ def calculate_modified_hhi(data):
         row.append(relay_percentages[operator_name])
         row.append(client_percentages[operator_name])
         matrix.append(row)
+
+    cvs = calculate_variability(matrix)
+
+    market_share_clients = calculate_r_squared(cvs, 1, 2)
+    market_share_relays = calculate_r_squared(cvs, 1, 3)
+    relays_clients = calculate_r_squared(cvs, 2, 3)
+
+    print("\nR^2 for variability between market share and clients:", round(market_share_clients, 2))
+    print("R^2 for variability between market share and relays:", round(market_share_relays, 2))
+    print("R^2 for variability between relays and clients:", round(relays_clients, 2))
+    print("\n")
 
     standard_hhi = calculate_standard_hhi(matrix)
 

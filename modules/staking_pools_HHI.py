@@ -169,11 +169,17 @@ def calculate_modified_hhi(data):
     cvs = calculate_variability(matrix)
     # print(json.dumps(cvs, indent=2))
 
+    marketshare_clients = calculate_r_squared(cvs, 1, 3)
+    marketshare_relays = calculate_r_squared(cvs, 1, 2)
+    marketshare_operators = calculate_r_squared(cvs, 1, 4)
     relays_clients = calculate_r_squared(cvs, 2, 3)
     relays_operators = calculate_r_squared(cvs, 2, 4)
     clients_operators = calculate_r_squared(cvs, 3, 4)
 
-    print("\nR^2 for variability between relays and clients:", round(relays_clients, 2))
+    print("\nR^2 for variability between market share and clients:", round(marketshare_clients, 2))
+    print("R^2 for variability between market share and relays:", round(marketshare_relays, 2))
+    print("R^2 for variability between market share and operators:", round(marketshare_operators, 2))
+    print("R^2 for variability between relays and clients:", round(relays_clients, 2))
     print("R^2 for variability between relays and node operators:", round(relays_operators, 2))
     print("R^2 for variability between clients and node operators:", round(clients_operators, 2))
     print("\n")
