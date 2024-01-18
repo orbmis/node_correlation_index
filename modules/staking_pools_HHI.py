@@ -42,8 +42,11 @@ def calculate_coefficient_of_variation(data):
     Returns:
     - coefficient_of_variation: float
     """
+    mean_value = 0
+
     # Calculate the mean
-    mean_value = sum(data) / len(data)
+    if len(data) != 0:
+        mean_value = sum(data) / len(data)
     
     # Calculate the sum of squared differences from the mean
     sum_squared_diff = sum((x - mean_value)**2 for x in data)
@@ -55,7 +58,10 @@ def calculate_coefficient_of_variation(data):
         std_dev = (sum_squared_diff / (len(data) - 1))**0.5
     
     # Calculate the coefficient of variation
-    coefficient_of_variation = (std_dev / mean_value) * 100
+    coefficient_of_variation = 0
+
+    if mean_value != 0:
+        coefficient_of_variation = (std_dev / mean_value) * 100
     
     return coefficient_of_variation
 
