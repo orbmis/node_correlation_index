@@ -77,7 +77,8 @@ password = os.getenv("PASSWORD")
 # Check if both username and password are available
 if username is not None and password is not None:
     # Get the access token
-    access_token = get_access_token(username, password)
+    # access_token = get_access_token(username, password)
+    access_token = os.getenv("API_KEY")
 
     if access_token:
         # Set the initial API URL
