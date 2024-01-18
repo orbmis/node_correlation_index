@@ -2,6 +2,7 @@ import math
 import json
 import numpy as np
 
+
 def calculate_r_squared(data, x, y):
     """
     Calculate R^2 value from Pearson's correlation coefficient for the 3rd and 4th values across all elements.
@@ -22,8 +23,8 @@ def calculate_r_squared(data, x, y):
 
     # Calculate Pearson's correlation coefficient (r)
     numerator = sum((x - mean_x) * (y - mean_y) for x, y in zip(x_values, y_values))
-    denominator_x = sum((x - mean_x)**2 for x in x_values)
-    denominator_y = sum((y - mean_y)**2 for y in y_values)
+    denominator_x = sum((x - mean_x) ** 2 for x in x_values)
+    denominator_y = sum((y - mean_y) ** 2 for y in y_values)
 
     r = numerator / (denominator_x**0.5 * denominator_y**0.5)
 
@@ -31,6 +32,7 @@ def calculate_r_squared(data, x, y):
     r_squared = r**2
 
     return r_squared
+
 
 def calculate_coefficient_of_variation(data):
     """
@@ -47,60 +49,101 @@ def calculate_coefficient_of_variation(data):
     # Calculate the mean
     if len(data) != 0:
         mean_value = sum(data) / len(data)
-    
+
     # Calculate the sum of squared differences from the mean
-    sum_squared_diff = sum((x - mean_value)**2 for x in data)
+    sum_squared_diff = sum((x - mean_value) ** 2 for x in data)
 
     std_dev = 0
-    
+
     # Calculate the standard deviation
-    if (len(data) - 1)**0.5 != 0:
-        std_dev = (sum_squared_diff / (len(data) - 1))**0.5
-    
+    if (len(data) - 1) ** 0.5 != 0:
+        std_dev = (sum_squared_diff / (len(data) - 1)) ** 0.5
+
     # Calculate the coefficient of variation
     coefficient_of_variation = 0
 
     if mean_value != 0:
         coefficient_of_variation = (std_dev / mean_value) * 100
-    
+
     return coefficient_of_variation
+
 
 def calculate_variability(data):
     # Extracting relevant data
     names = [entry[0] for entry in data]
     market_shares = [entry[1] for entry in data]
-    relay_percentages = [list(value for value in entry[2].values() if value != 0) for entry in data]
-    client_percentages = [list(value for value in entry[3].values() if value != 0) for entry in data]
-    node_operators = [list(value for value in entry[4].values() if value != 0) for entry in data]
+    relay_percentages = [
+        list(value for value in entry[2].values() if value != 0) for entry in data
+    ]
+    client_percentages = [
+        list(value for value in entry[3].values() if value != 0) for entry in data
+    ]
+    node_operators = [
+        list(value for value in entry[4].values() if value != 0) for entry in data
+    ]
 
     # Calculate covariance
-    relay_covariance = [calculate_coefficient_of_variation(category) for category in relay_percentages]
-    client_covariance = [calculate_coefficient_of_variation(category) for category in client_percentages]
-    node_operator_covariance = [calculate_coefficient_of_variation(category) for category in node_operators]
+    relay_covariance = [
+        calculate_coefficient_of_variation(category) for category in relay_percentages
+    ]
+    client_covariance = [
+        calculate_coefficient_of_variation(category) for category in client_percentages
+    ]
+    node_operator_covariance = [
+        calculate_coefficient_of_variation(category) for category in node_operators
+    ]
 
     # Create the result array
-    result = [["name", "market share", "relay covariance", "client covariance", "node operator covariance"]]
+    result = [
+        [
+            "name",
+            "market share",
+            "relay covariance",
+            "client covariance",
+            "node operator covariance",
+        ]
+    ]
 
     # Populate the result array with calculated values
     for i in range(len(data)):
-       result.append([names[i], market_shares[i], relay_covariance[i], client_covariance[i], node_operator_covariance[i]])
+        result.append(
+            [
+                names[i],
+                market_shares[i],
+                relay_covariance[i],
+                client_covariance[i],
+                node_operator_covariance[i],
+            ]
+        )
 
     return result
+
 
 def calculate_standard_hhi(data):
     hhi = 0.0
 
     for entity in data:
         market_share = entity[1] * 100  # Extracting market share from the first element
-        hhi += market_share ** 2
+        hhi += market_share**2
 
     return hhi
 
+
 def calculate_modified_hhi(data):
     # Initialize lists to store unique relays, clients, and pools
-    relays = ["manifold", "bloxroute_maxprofit", "agnostic", "no_mev_boost", "bloxroute_regulated", "ultra_sound_money", "aestus", "flashbots", "edennetwork"]
+    relays = [
+        "manifold",
+        "bloxroute_maxprofit",
+        "agnostic",
+        "no_mev_boost",
+        "bloxroute_regulated",
+        "ultra_sound_money",
+        "aestus",
+        "flashbots",
+        "edennetwork",
+    ]
     clients = ["Nimbus", "Prysm", "Lighthouse", "Teku", "Lodestar", "Unknown"]
-    operators = set() 
+    operators = set()
     pool_names = set()
 
     # Create dictionaries to store relay and client percentages for each pool
@@ -120,7 +163,10 @@ def calculate_modified_hhi(data):
             market_shares.setdefault(pool_name, 0)
             market_shares[pool_name] += pool["networkPenetration"]
             node_operators.setdefault(pool_name, {})
-            node_operators[pool_name][item["displayName"]] = node_operators[pool_name].get(item["displayName"], 0) + pool["networkPenetration"]
+            node_operators[pool_name][item["displayName"]] = (
+                node_operators[pool_name].get(item["displayName"], 0)
+                + pool["networkPenetration"]
+            )
             operators.add(item["displayName"])
 
             for relay in relays:
@@ -129,7 +175,9 @@ def calculate_modified_hhi(data):
                     if relayer["relayer"] == relay:
                         relay_percentage = relayer["percentage"] * 100
                         break
-                relay_percentages[pool_name].setdefault(relay, []).append(relay_percentage)
+                relay_percentages[pool_name].setdefault(relay, []).append(
+                    relay_percentage
+                )
 
             for client in clients:
                 client_percentage = 0.0
@@ -137,8 +185,10 @@ def calculate_modified_hhi(data):
                     if client_percent["client"] == client:
                         client_percentage = client_percent["percentage"] * 100
                         break
-                client_percentages[pool_name].setdefault(client, []).append(client_percentage)
-    
+                client_percentages[pool_name].setdefault(client, []).append(
+                    client_percentage
+                )
+
     # After calculating relay_percentages, modify it to store the average value for each relay
     for pool_name, relay_values in relay_percentages.items():
         for relay, percentages in relay_values.items():
@@ -149,7 +199,7 @@ def calculate_modified_hhi(data):
             else:
                 # Handle the case where there are no values for the relay
                 relay_percentages[pool_name][relay] = 0.0
-    
+
     # After calculating client_percentages, modify it to store the average value for each client
     for pool_name, client_values in client_percentages.items():
         for client, percentages in client_values.items():
@@ -182,12 +232,27 @@ def calculate_modified_hhi(data):
     relays_operators = calculate_r_squared(cvs, 2, 4)
     clients_operators = calculate_r_squared(cvs, 3, 4)
 
-    print("\nR^2 for variability between market share and clients:", round(marketshare_clients, 2))
-    print("R^2 for variability between market share and relays:", round(marketshare_relays, 2))
-    print("R^2 for variability between market share and operators:", round(marketshare_operators, 2))
+    print(
+        "\nR^2 for variability between market share and clients:",
+        round(marketshare_clients, 2),
+    )
+    print(
+        "R^2 for variability between market share and relays:",
+        round(marketshare_relays, 2),
+    )
+    print(
+        "R^2 for variability between market share and operators:",
+        round(marketshare_operators, 2),
+    )
     print("R^2 for variability between relays and clients:", round(relays_clients, 2))
-    print("R^2 for variability between relays and node operators:", round(relays_operators, 2))
-    print("R^2 for variability between clients and node operators:", round(clients_operators, 2))
+    print(
+        "R^2 for variability between relays and node operators:",
+        round(relays_operators, 2),
+    )
+    print(
+        "R^2 for variability between clients and node operators:",
+        round(clients_operators, 2),
+    )
     print("\n")
 
     standard_hhi = calculate_standard_hhi(matrix)
@@ -199,8 +264,8 @@ def calculate_modified_hhi(data):
         row_correlation_value = 0.0
 
         for j in range(len(matrix)):
-            n_i = matrix[i][1] # market share of pool i
-            n_j = matrix[j][1] # market share of pool j
+            n_i = matrix[i][1]  # market share of pool i
+            n_j = matrix[j][1]  # market share of pool j
 
             relays_correlation = 0.0
             for relay in relays:
@@ -212,7 +277,9 @@ def calculate_modified_hhi(data):
 
             operators_correlation = 0.0
             for operator in operators:
-                operators_correlation += min(matrix[i][4].get(operator, 0), matrix[j][4].get(operator, 0))
+                operators_correlation += min(
+                    matrix[i][4].get(operator, 0), matrix[j][4].get(operator, 0)
+                )
 
             c_ij = relays_correlation + clients_correlation + operators_correlation
 
@@ -222,9 +289,10 @@ def calculate_modified_hhi(data):
 
     return standard_hhi, modified_hhi
 
-def analyze_staking_pools_HHI(file_path='collated.json'):
+
+def analyze_staking_pools_HHI(file_path="collated.json"):
     # Load JSON data from file
-    with open(file_path, 'r') as file:
+    with open(file_path, "r") as file:
         json_data = json.load(file)
 
     print("\nCalculating modified HHI for Staking Pools . . .\n")
@@ -238,6 +306,7 @@ def analyze_staking_pools_HHI(file_path='collated.json'):
     print("Modified HHI Value:", round(modified_hhi))
 
     print("\n")
+
 
 if __name__ == "__main__":
     analyze_staking_pools_HHI()

@@ -10,6 +10,7 @@ from io import StringIO
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
 def array_to_csv_string(data_array):
     """
     Convert a two-dimensional array to a CSV string.
@@ -27,7 +28,7 @@ def array_to_csv_string(data_array):
     csv_stream = StringIO()
 
     # Create a CSV writer
-    csv_writer = csv.writer(csv_stream, delimiter=',')
+    csv_writer = csv.writer(csv_stream, delimiter=",")
 
     # Write the rows to the CSV stream
     csv_writer.writerows(data_array)
@@ -39,6 +40,7 @@ def array_to_csv_string(data_array):
     csv_stream.close()
 
     return csv_string
+
 
 def sort_and_get_top_entries(data_array, n=25):
     """
@@ -66,6 +68,7 @@ def sort_and_get_top_entries(data_array, n=25):
 
     return top_last_column_entries
 
+
 def get_hamming(df_full, attributes):
     """
     For every record in the dataset, we compare it to every other record in the dataset along a specific attribute.
@@ -82,15 +85,19 @@ def get_hamming(df_full, attributes):
     # df = df_full.head(100)
     df = df_full
 
-    matrix = [[0 for x in range(len(attributes) + 2)] for y in range(len(df))] 
+    matrix = [[0 for x in range(len(attributes) + 2)] for y in range(len(df))]
 
     # attribute index - initiated to one to avoid comparison of "index" column
     n = 1
 
     for attribute in attributes:
-        for i in tqdm(range(len(df) - 1), desc='Calculating Hamming Weights for ' + attribute, unit='entity'):
+        for i in tqdm(
+            range(len(df) - 1),
+            desc="Calculating Hamming Weights for " + attribute,
+            unit="entity",
+        ):
             hamming_weight = 0
-            matrix[i][0] = df.at[i, 'index']
+            matrix[i][0] = df.at[i, "index"]
 
             for j in range(len(df) - 1):
                 matrix[i][n] += int(df.at[i, attribute] == df.at[j, attribute])
@@ -103,6 +110,7 @@ def get_hamming(df_full, attributes):
 
     return matrix
 
+
 # Cramér's V calculation method
 def cramers_v(table):
     chi2, _, _, _ = chi2_contingency(table)
@@ -114,7 +122,8 @@ def cramers_v(table):
     kcorr = k - ((k - 1) ** 2) / (n - 1)
     return (phi2corr / min((kcorr - 1), (rcorr - 1))) ** 0.5
 
-def analyze_data(file_path='data.csv'):
+
+def analyze_data(file_path="data.csv"):
     # Read the CSV file into a pandas DataFrame
     df = pd.read_csv(file_path)
 
@@ -150,7 +159,7 @@ def analyze_data(file_path='data.csv'):
     print("=" * 53)
     print("\n")
 
-    attributes_to_compare = ['country_code', 'client_name', 'isp_alias', 'att_subnets']
+    attributes_to_compare = ["country_code", "client_name", "isp_alias", "att_subnets"]
 
     print("Calcualting Hamming weights across each attribute . . .\n")
 
@@ -180,6 +189,7 @@ def analyze_data(file_path='data.csv'):
         # Print or use the result as needed
         print(result)
         print("\n")
+
 
 if __name__ == "__main__":
     analyze_data()
