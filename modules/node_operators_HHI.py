@@ -232,20 +232,16 @@ def calculate_modified_hhi(data):
             n_j = matrix[j][1]  # market share of pool j
 
             relays_correlation = 0.0
+
             for relay in relays:
                 relays_correlation += min(matrix[i][2][relay], matrix[j][2][relay])
 
             clients_correlation = 0.0
+
             for clients in clients:
                 clients_correlation += min(matrix[i][3][client], matrix[j][3][client])
 
-            operators_correlation = 0.0
-            for operator in operators:
-                operators_correlation += min(
-                    matrix[i][4].get(operator, 0), matrix[j][4].get(operator, 0)
-                )
-
-            c_ij = relays_correlation + clients_correlation + operators_correlation
+            c_ij = relays_correlation + clients_correlation
 
             row_correlation_value += ((n_i * n_j) * c_ij) * 100
 

@@ -96,13 +96,9 @@ def calculate_average_client_percentage_by_decile(
         i: {client: [] for client in potential_clients} for i in range(num_deciles)
     }
 
-    # the scale factor is scale the results so that they don't all appear in the first decile
-    # in reality deciles 1 - 9 actually in the first decile, .e 0.0 - 0.99
-    scale_factor = 2.5
-
     # Populate decile data structure
     for node_operator, node_data in json_data.items():
-        decile = math.floor(node_data["network_penetration"] * scale_factor)
+        decile = math.floor(node_data["network_penetration"])
         clients_data = node_data["clients"]
 
         for client in potential_clients:
