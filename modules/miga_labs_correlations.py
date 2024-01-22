@@ -194,49 +194,9 @@ def analyze_data(file_path="data.csv"):
 if __name__ == "__main__":
     analyze_data()
 
-
 # TODO: once we sort the results in ascending order, we can iterate over each record to determine which attribute has the highest hamming weight
 # this will result in a table of "index,attrbute", where "attribute" is the attribute with the highest correlation to other node for that record
 # which will naturally be the value that occurs the most
 # this will allows us to see which out of the records with the highest overall correlation value, which attributes are most correlated
 
 print("\n\n")
-
-
-# Interpretation:
-#
-#    Pairwise Comparison: country_code vs client_name
-#        Chi-squared Value: 866.56
-#        P-value: 4.67×10−514.67×10−51
-#        Cramér's V: 0.22
-#        Interpretation: There is a significant association between country_code and client_name. The Cramér's V value (0.22) indicates a small-to-medium strength of association.
-#
-#    Pairwise Comparison: country_code vs isp_alias
-#        Chi-squared Value: 83766.05
-#        P-value: 0.0
-#        Cramér's V: 0.82
-#        Interpretation: There is a highly significant association between country_code and isp_alias. The Cramér's V value (0.82) indicates a strong association.
-#
-#    Pairwise Comparison: country_code vs att_subnets
-#        Chi-squared Value: 4625.32
-#        P-value: 1.23×10−481.23×10−48
-#        Cramér's V: 0.12
-#        Interpretation: There is a significant association between country_code and att_subnets. The Cramér's V value (0.12) indicates a small strength of association.
-#
-#    Pairwise Comparison: client_name vs isp_alias
-#        Chi-squared Value: 2409.07
-#        P-value: 2.52×10−132.52×10−13
-#        Cramér's V: 0.21
-#        Interpretation: There is a significant association between client_name and isp_alias. The Cramér's V value (0.21) indicates a small-to-medium strength of association.
-#
-#    Pairwise Comparison: client_name vs att_subnets
-#        Chi-squared Value: 969.73
-#        P-value: 3.91×10−563.91×10−56
-#        Cramér's V: 0.23
-#        Interpretation: There is a significant association between client_name and att_subnets. The Cramér's V value (0.23) indicates a small-to-medium strength of association.
-#
-#    Pairwise Comparison: isp_alias vs att_subnets
-#        Chi-squared Value: 30525.86
-#        P-value: 0.0
-#        Cramér's V: 0.31
-#        Interpretation: There is a highly significant association between isp_alias and att_subnets. The Cramér's V value (0.31) indicates a moderate strength of association.
